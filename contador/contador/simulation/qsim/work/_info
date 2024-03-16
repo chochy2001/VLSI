@@ -1,0 +1,166 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/joshu/Downloads/contador/contador/simulation/qsim
+T_opt
+!s110 1707860749
+VYbD=Hl]``D<8`g6P:4kkM0
+04 21 14 work practica1_vhd_vec_tst practica1_arch 1
+=1-f8b46ab2e50a-65cbe30c-21a-32d8
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ehard_block
+Z2 w1707860746
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 d[ZBZCchVhI@aZ@hngZ0f1
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 moe6]I7ZkROIH3PfJMkXh1
+!i122 6
+R1
+Z9 8contador.vho
+Z10 Fcontador.vho
+l0
+L35 1
+Vhj[i;a0dD85B`o1JPT^cg2
+!s100 3A]XnMhF<;9mKUe5mn3aM1
+Z11 OL;C;2021.2;73
+32
+Z12 !s110 1707860747
+!i10b 1
+Z13 !s108 1707860747.000000
+Z14 !s90 -work|work|contador.vho|
+Z15 !s107 contador.vho|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 10 hard_block 0 22 hj[i;a0dD85B`o1JPT^cg2
+!i122 6
+l76
+L54 28
+Va5ClDYec`9chO`Ne0M1NL2
+!s100 >:Wi^nX[YiN=@>>JC6K_83
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Epractica1
+R2
+R4
+R8
+R3
+Z18 DPx6 altera 11 dffeas_pack 0 22 ^oS01<AhH<ZbI@CNcPk2V0
+R5
+R6
+R7
+Z19 DPx6 altera 28 altera_primitives_components 0 22 Y19K[Kjfb73Y`YfbP9Kf30
+!i122 6
+R1
+R9
+R10
+l0
+L91 1
+VH1dAWGM7RI:9f]5An:FoV1
+!s100 ?POG:n_ZMDB24Z64B4fUE3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Astructure
+R4
+R8
+R3
+R18
+R5
+R6
+R7
+R19
+DEx4 work 9 practica1 0 22 H1dAWGM7RI:9f]5An:FoV1
+!i122 6
+l365
+L141 3471
+VUdRk4Yd7[OCNIQ6XMZXnZ2
+!s100 OYU2M1Sh:G16nQLIR<Bl[0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Epractica1_vhd_vec_tst
+Z20 w1707860745
+R6
+R7
+!i122 7
+R1
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L32 1
+V`EN`nKj4^BGhYKil`Oo3>1
+!s100 k;Gm6l<3biTJIE@JEI0I72
+R11
+32
+Z23 !s110 1707860748
+!i10b 1
+Z24 !s108 1707860748.000000
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 0
+R16
+R17
+Apractica1_arch
+R6
+R7
+DEx4 work 21 practica1_vhd_vec_tst 0 22 `EN`nKj4^BGhYKil`Oo3>1
+!i122 7
+l55
+L34 252
+VlS`HK17O5;MEP@`e;3K<_1
+!s100 HQe]C_gM[g0f00zfP01k>0
+R11
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R16
+R17

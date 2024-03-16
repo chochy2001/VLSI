@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+ENTITY dec is
+port(n: in integer range 0 to 100;
+	  seg1,seg2,seg3: out std_logic_vector(7 downto 0));
+END dec;
+
+architecture HAPG of dec is
+begin 
+process(n)
+begin
+if n=0 then 
+	seg1 <= "11111111";
+	seg2 <= "11111111";
+	seg3 <= "00000011";
+elsif n > 0 AND n < 100 then 
+	seg1 <= "11111111";
+	seg3 <= "00000011";
+	case n is
+		when 0 => seg2 <= "00000011";
+		when 10 => seg2 <= "10011111";
+		when 20 => seg2 <= "00100101";
+		when 30 => seg2 <= "00001101";
+		when 40 => seg2 <= "10011001";
+		when 50 => seg2 <= "01001001";
+		when 60 => seg2 <= "01000001";
+		when 70 => seg2 <= "00011111";
+		when 80 => seg2 <= "00000001";
+		when 90 => seg2 <= "00001001";
+		when others => seg2 <= "11111111";
+	end case;
+else 
+	seg1 <= "10011111";
+	seg2 <= "00000011";
+	seg3 <= "00000011";
+end if;
+end process;
+end HAPG;

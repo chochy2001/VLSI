@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "S1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "S1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "S1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "S1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "S1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "S1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PWM1",
+					"strict" : false
+				},
+				{
+					"name" : "INC",
+					"strict" : false
+				},
+				{
+					"name" : "DECr",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_MST",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
