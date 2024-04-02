@@ -8,6 +8,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "SEG0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG0[1]",
+					"strict" : false
+				},
+				{
 					"name" : "SEG1[7]",
 					"strict" : false
 				},
@@ -89,6 +105,14 @@
 				},
 				{
 					"name" : "SEG3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[0]",
 					"strict" : false
 				},
 				{

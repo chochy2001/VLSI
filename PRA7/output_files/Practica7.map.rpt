@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica7
-Tue Apr  2 00:54:44 2024
+Tue Apr  2 01:42:19 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -14,12 +14,13 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Practica7|ASM:inst|PRESENTE
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: divf:inst3
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: divf:inst3
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr  2 00:54:44 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr  2 01:42:19 2024          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; Practica7                                      ;
 ; Top-level Entity Name              ; Practica7                                      ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 103                                            ;
-;     Total combinational functions  ; 102                                            ;
+; Total logic elements               ; 122                                            ;
+;     Total combinational functions  ; 121                                            ;
 ;     Dedicated logic registers      ; 47                                             ;
 ; Total registers                    ; 47                                             ;
 ; Total pins                         ; 37                                             ;
@@ -185,16 +186,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 103            ;
+; Estimated Total logic elements              ; 122            ;
 ;                                             ;                ;
-; Total combinational functions               ; 102            ;
+; Total combinational functions               ; 121            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 41             ;
-;     -- 3 input functions                    ; 17             ;
-;     -- <=2 input functions                  ; 44             ;
+;     -- 4 input functions                    ; 55             ;
+;     -- 3 input functions                    ; 10             ;
+;     -- <=2 input functions                  ; 56             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 76             ;
+;     -- normal mode                          ; 95             ;
 ;     -- arithmetic mode                      ; 26             ;
 ;                                             ;                ;
 ; Total registers                             ; 47             ;
@@ -207,8 +208,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; divf:inst3|CLK ;
 ; Maximum fan-out                             ; 36             ;
-; Total fan-out                               ; 488            ;
-; Average fan-out                             ; 2.19           ;
+; Total fan-out                               ; 551            ;
+; Average fan-out                             ; 2.28           ;
 +---------------------------------------------+----------------+
 
 
@@ -217,9 +218,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name    ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
-; |Practica7                 ; 102 (0)             ; 47 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; 0          ; |Practica7             ; Practica7   ; work         ;
+; |Practica7                 ; 121 (0)             ; 47 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; 0          ; |Practica7             ; Practica7   ; work         ;
 ;    |ASM:inst|              ; 61 (61)             ; 35 (35)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica7|ASM:inst    ; ASM         ; work         ;
-;    |demux:inst4|           ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica7|demux:inst4 ; demux       ; work         ;
+;    |demux:inst4|           ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica7|demux:inst4 ; demux       ; work         ;
 ;    |divf:inst3|            ; 20 (20)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica7|divf:inst3  ; divf        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -237,6 +238,20 @@ Encoding Type:  One-Hot
 ; PRESENTE.ESTADO3 ; 0              ; 1                ; 0                ; 0                ; 1               ;
 ; PRESENTE.DELAY   ; 1              ; 0                ; 0                ; 0                ; 1               ;
 +------------------+----------------+------------------+------------------+------------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; demux:inst4|SEG3[5]                                ; VCC                 ; yes                    ;
+; demux:inst4|SEG3[4]                                ; VCC                 ; yes                    ;
+; demux:inst4|SEG3[3]                                ; VCC                 ; yes                    ;
+; demux:inst4|SEG3[1]                                ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -259,8 +274,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Practica7|ASM:inst|D      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Practica7|ASM:inst|C      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Practica7|ASM:inst|D      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -285,18 +300,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 5                           ;
 ;     SLD               ; 4                           ;
 ;     plain             ; 20                          ;
-; cycloneiii_lcell_comb ; 106                         ;
+; cycloneiii_lcell_comb ; 125                         ;
 ;     arith             ; 26                          ;
 ;         2 data inputs ; 26                          ;
-;     normal            ; 80                          ;
+;     normal            ; 99                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 41                          ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 55                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.31                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,7 +320,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -315,7 +330,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Apr  2 00:54:27 2024
+    Info: Processing started: Tue Apr  2 01:42:03 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica7 -c Practica7
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -334,51 +349,89 @@ Info (12127): Elaborating entity "Practica7" for the top level hierarchy
 Info (12128): Elaborating entity "ASM" for hierarchy "ASM:inst"
 Info (12128): Elaborating entity "divf" for hierarchy "divf:inst3"
 Info (12128): Elaborating entity "demux" for hierarchy "demux:inst4"
-Warning (10492): VHDL Process Statement warning at demux.vhd(61): signal "allow_assignments" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 61
-Warning (10631): VHDL Process Statement warning at demux.vhd(19): inferring latch(es) for signal or variable "SEG0", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at demux.vhd(19): inferring latch(es) for signal or variable "SEG1", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at demux.vhd(19): inferring latch(es) for signal or variable "SEG2", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at demux.vhd(19): inferring latch(es) for signal or variable "SEG3", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[0]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[1]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[2]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[3]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[4]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[5]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[6]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG3[7]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[0]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[1]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[2]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[3]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[4]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[5]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[6]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG2[7]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[0]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[1]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[2]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[3]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[4]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[5]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[6]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG1[7]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[0]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[1]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[2]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[3]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[4]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[5]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[6]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
-Info (10041): Inferred latch for "SEG0[7]" at demux.vhd(19) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at demux.vhd(68): signal "allow_assignments" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at demux.vhd(18): inferring latch(es) for signal or variable "SEG0", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at demux.vhd(18): inferring latch(es) for signal or variable "SEG1", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at demux.vhd(18): inferring latch(es) for signal or variable "SEG2", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at demux.vhd(18): inferring latch(es) for signal or variable "SEG3", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[0]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[1]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[2]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[3]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[4]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[5]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[6]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG3[7]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[0]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[1]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[2]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[3]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[4]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[5]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[6]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG2[7]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[0]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[1]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[2]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[3]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[4]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[5]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[6]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG1[7]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[0]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[1]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[2]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[3]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[4]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[5]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[6]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Info (10041): Inferred latch for "SEG0[7]" at demux.vhd(18) File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[1]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[2]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[3]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[4]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[5]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[6]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[7]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[1]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[2]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[3]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[4]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[5]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[6]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[7]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[1]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[2]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[3]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[4]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[5]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[6]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[7]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[1]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[2]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[3]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[4]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[5]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[6]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG2[7]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[1]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[2]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[3]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[4]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[5]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[6]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG1[7]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[1]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[2]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[3]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[4]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[5]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[6]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
+Warning (14026): LATCH primitive "demux:inst4|SEG0[7]" is permanently enabled File: C:/Users/joshu/Documents/VLSI/PRA7/demux.vhd Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SEG0[7]" is stuck at VCC
     Warning (13410): Pin "SEG0[6]" is stuck at VCC
-    Warning (13410): Pin "SEG0[5]" is stuck at VCC
-    Warning (13410): Pin "SEG0[4]" is stuck at VCC
-    Warning (13410): Pin "SEG0[3]" is stuck at VCC
     Warning (13410): Pin "SEG0[2]" is stuck at VCC
-    Warning (13410): Pin "SEG0[1]" is stuck at VCC
     Warning (13410): Pin "SEG0[0]" is stuck at VCC
     Warning (13410): Pin "SEG1[0]" is stuck at VCC
     Warning (13410): Pin "SEG2[0]" is stuck at VCC
@@ -386,17 +439,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SEL[1]"
-    Warning (15610): No output dependent on input pin "SEL[0]"
-Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 103 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Tue Apr  2 00:54:44 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 122 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Tue Apr  2 01:42:19 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:22
 
 

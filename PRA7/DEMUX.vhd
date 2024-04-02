@@ -19,39 +19,47 @@ BEGIN
     BEGIN
         CASE SEL IS
             WHEN 0 =>
-                IF C = 1 THEN
+                IF C >= 1 THEN
                     SEG0 <= "00010001"; --A
                     SEG1 <= "11100011"; --L 
                     SEG2 <= "11100001"; --T
                     SEG3 <= "11000101"; --O
                     allow_assignments <= FALSE;
+						ELSE
+							allow_assignments <= TRUE;
                 END IF;
             
             WHEN 1 =>
-                IF D = 7 AND U = 5 THEN
+                IF (C = 0 AND D >= 7 AND U >= 5) OR (C > 0) THEN
                     SEG0 <= "00010001"; --A
                     SEG1 <= "11100011"; --L 
                     SEG2 <= "11100001"; --T
                     SEG3 <= "11000101"; --O
                     allow_assignments <= FALSE;
+					  ELSE
+						allow_assignments <= TRUE;
                 END IF;
             
             WHEN 2 =>
-                IF D = 5 THEN
+                IF (C = 0 AND D >= 5) OR ( C > 0) THEN
                     SEG0 <= "00010001"; --A
                     SEG1 <= "11100011"; --L 
                     SEG2 <= "11100001"; --T
                     SEG3 <= "11000101"; --O
                     allow_assignments <= FALSE;
+					ELSE
+							allow_assignments <= TRUE;
                 END IF;
             
             WHEN 3 =>
-                IF D = 2 AND U = 5 THEN
+                IF (C = 0 AND D >= 2 AND U >= 5) OR (C > 0) THEN
                     SEG0 <= "00010001"; --A
                     SEG1 <= "11100011"; --L 
                     SEG2 <= "11100001"; --T
                     SEG3 <= "11000101"; --O
                     allow_assignments <= FALSE;
+					ELSE
+							allow_assignments <= TRUE;
                 END IF;
                 
             WHEN OTHERS =>
@@ -98,6 +106,5 @@ BEGIN
             END CASE;
 				SEG3 <= "11111111";
         END IF;
-		  allow_assignments <= TRUE;
     END PROCESS;
 END BEAS;
