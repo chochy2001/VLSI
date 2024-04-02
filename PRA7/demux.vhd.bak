@@ -1,0 +1,83 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY demux IS
+	PORT(C, D, U: IN INTEGER RANGE 0 TO 9; -- IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	     SEL : IN INTEGER RANGE 0 TO 3;   
+			  SAL: OUT STD_LOGIC_VECTOR(7 DOWNTO 0)); -- PARA LOS 8 SEG DEL DISPLAY
+END ENTITY;
+
+ARCHITECTURE BEAS OF deco IS
+BEGIN
+
+	IF SEL = 0 THEN
+		DECO3 <= "11111111";
+		
+		CASE C IS
+		  WHEN 0 => DECO2 <= "00000011"; -- 0
+		  WHEN 1 => DECO2 <= "10011111"; -- 1
+		  WHEN 2 => DECO2 <= "00100101"; -- 2
+		  WHEN 3 => DECO2 <= "00001101"; -- 3
+		  WHEN 4 => DECO2 <= "10011001"; -- 4
+		  WHEN OTHERS => DECO2 <= "11111111"; -- OTHERS
+
+		  CASE D IS
+		  WHEN 0 => DECO1 <= "00000011"; -- 0
+		  WHEN 1 => DECO1 <= "10011111"; -- 1
+		  WHEN 2 => DECO1 <= "00100101"; -- 2
+		  WHEN 3 => DECO1 <= "00001101"; -- 3
+		  WHEN 4 => DECO1 <= "10011001"; -- 4
+		  WHEN 5 => DECO1 <= "01001001"; -- 5
+		  WHEN 6 => DECO1 <= "01000001"; -- 6
+		  WHEN 7 => DECO1 <= "00011111"; -- 7
+		  WHEN 8 => DECO1 <= "00000001"; -- 8
+		  WHEN 9 => DECO1 <= "00001001"; -- 9
+		  WHEN OTHERS => DECO1 <= "11111111"; -- OTHERS
+
+		  CASE U IS
+		  WHEN 0 => DECO0 <= "00000011"; -- 0
+		  WHEN 1 => DECO0 <= "10011111"; -- 1
+		  WHEN 2 => DECO0 <= "00100101"; -- 2
+		  WHEN 3 => DECO0 <= "00001101"; -- 3
+		  WHEN 4 => DECO0 <= "10011001"; -- 4
+		  WHEN 5 => DECO0 <= "01001001"; -- 5
+		  WHEN 6 => DECO0 <= "01000001"; -- 6
+		  WHEN 7 => DECO0 <= "00011111"; -- 7
+		  WHEN 8 => DECO0 <= "00000001"; -- 8
+		  WHEN 9 => DECO0 <= "00001001"; -- 9
+		  WHEN OTHERS => DECO0 <= "11111111"; -- OTHERS
+	ELSE IF SEL = 1 THEN
+			IF D < 5 THEN
+				DECO3 <= --A
+				DECO2 <= --L
+				DECO1 <= --t
+				DECO0 <= --o
+			ELSE
+				DECO3 <= "11111111";
+				DECO2 <= "11111111";
+			CASE D IS
+		  WHEN 0 => DECO1 <= "00000011"; -- 0
+		  WHEN 1 => DECO1 <= "10011111"; -- 1
+		  WHEN 2 => DECO1 <= "00100101"; -- 2
+		  WHEN 3 => DECO1 <= "00001101"; -- 3
+		  WHEN 4 => DECO1 <= "10011001"; -- 4
+		  WHEN 5 => DECO1 <= "01001001"; -- 5
+		  WHEN OTHERS => DECO1 <= "11111111"; -- OTHERS
+
+		  CASE U IS
+		  WHEN 0 => DECO0 <= "00000011"; -- 0
+		  WHEN 1 => DECO0 <= "10011111"; -- 1
+		  WHEN 2 => DECO0 <= "00100101"; -- 2
+		  WHEN 3 => DECO0 <= "00001101"; -- 3
+		  WHEN 4 => DECO0 <= "10011001"; -- 4
+		  WHEN 5 => DECO0 <= "01001001"; -- 5
+		  WHEN 6 => DECO0 <= "01000001"; -- 6
+		  WHEN 7 => DECO0 <= "00011111"; -- 7
+		  WHEN 8 => DECO0 <= "00000001"; -- 8
+		  WHEN 9 => DECO0 <= "00001001"; -- 9
+		  WHEN OTHERS => DECO0 <= "11111111"; -- OTHERS
+			
+			END IF;
+	END IF;
+END CASE;
+END BEAS;

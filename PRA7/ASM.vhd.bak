@@ -1,0 +1,70 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY ASM IS
+	PORT(Echo, CLK: IN STD_LOGIC;
+	      C,D, U: BUFFER INTEGER RANGE 0 TO 9; 
+			 T: OUT STD_LOGIC);
+END ENTITY;
+
+ARCHITECTURE DBA OF ASM IS
+TYPE ESTADOS IS (INICIO, ESTADO1, ESTADO2, ESTADO3, DELAY);
+SIGNAL PRESENTE: ESTADOS := INICIO;
+BEGIN
+
+	PROCESS(ENTRADAS,CLK)
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			CASE PRESENTE IS
+				WHEN INICIO => -- TAREAS EN INICIO
+				T <= 0;
+				PRESENTE <= ESTADO1;
+				
+				WHEN ESTADO1 => -- TAREAS EN ESTADO1
+				T <= 1;
+				PRESENTE <= ESTADO2;
+								
+				WHEN ESTADO2 => -- TAREAS EN ESTADO2
+				T <= 0;
+					IF ECHO = 1 THEN
+						PRESENTE <= ESTADO3;
+					ELSE
+						PRESENTE <= INICIO;
+					END IF;
+
+				WHEN ESTADO3 => -- TAREAS EN ESTADO3
+				
+				IF C = 9 THEN
+					C <= 0;
+					IF D = 9 THEN
+						D <= 0;
+						IF U = 9 THEN
+							U <= 0;
+						ELSE
+							U <= U + 1;
+						END IF;
+					ELSE 
+						D <= D + 1;
+					END IF;
+				ELSE
+					C <= C + 1;
+				END IF;
+
+				IF ECHO = 1 THEN
+					PRESENTE <= ESTADO3;
+				ELSE 
+					PRESNETE <= DELAY;
+				
+				WHEN DELAY => -- TAREAS EN ESTADO2
+				IF AUX = 100000 THEN
+					AUX <= 0;
+					PRESENTE <= INICIO;
+				ELSE
+					AUX <= AUX + 1;
+					PRESENTE <= DELAY;
+				END IF;
+			END CASE;
+		END IF;
+	END PROCESS;
+
+END DBA;
