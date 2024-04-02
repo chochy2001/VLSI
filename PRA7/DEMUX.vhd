@@ -91,5 +91,6 @@ BEGIN
             WHEN 8 => SEG2 <= "00000001"; -- 8
             WHEN 9 => SEG2 <= "00001001"; -- 9
         END CASE;
+		  SEG3 <= "11111111";
     END PROCESS;
 END BEAS;
