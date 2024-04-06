@@ -1,0 +1,24 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY contador IS
+PORT(
+    CLK: IN STD_LOGIC;
+    CUENT: BUFFER integer RANGE 0 TO 249
+);
+END ENTITY;
+
+ARCHITECTURE BEAS OF contador IS
+BEGIN
+    PROCESS(CLK)
+    BEGIN
+        IF RISING_EDGE(CLK) THEN
+            IF CUENT = 99 THEN
+                CUENT <= 0;
+            ELSE
+                CUENT <= CUENT + 1;
+            END IF;
+        END IF;
+    END PROCESS;
+END BEAS;

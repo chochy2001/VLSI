@@ -1,0 +1,19 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY separa IS
+PORT(
+    CUENT: IN integer RANGE 0 TO 249;
+    C, D, U: OUT integer RANGE 0 TO 9);
+END ENTITY;
+
+ARCHITECTURE BEAS OF separa IS
+BEGIN
+    process(CUENT)
+	begin	
+		C <= (CUENT/100) MOD 10;
+		D <= (CUENT/10) MOD 10;
+		U <= CUENT MOD 10;
+	end process;
+END BEAS;

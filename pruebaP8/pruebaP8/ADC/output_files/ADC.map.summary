@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Apr  5 23:09:27 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : ADC
+Top-level Entity Name : pr
+Family : MAX 10
+Total logic elements : 162
+    Total combinational functions : 125
+    Dedicated logic registers : 125
+Total registers : 125
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 768
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 1
