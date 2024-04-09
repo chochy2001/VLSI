@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ASM is
+	port(CLK, H_ASM: in std_logic;
+			valor: in in std_logic_vector(7 downto 0);---teclado
+			Q0,Q1, Q2, Q3: buffer std_logic_vector(7 downto 0);
+		  M, C,D, U: BUFFER INTEGER RANGE 0 TO 9);--- out tec
+end entity;
+
+architecture Behavioral of ASM is
+
+TYPE ESTADOS IS (INICIO, ESTADO1, ESTADO2);
+SIGNAL PRESENTE: ESTADOS := INICIO;
+SIGNAL AUX: INTEGER RANGE 0 TO 100000 := 0;
+
+	begin
+	PROCESS(CLK)
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			CASE PRESENTE IS
+				WHEN INICIO => 
+					IF PRESENTE = INICIO THEN
+						U <= 0;
+						D <= 0;
+						C <= 0;
+						M <= 0;
+						PRESENTE <= ESTADO1;
+					END IF;
+					
+				WHEN ESTADO1 => 
+					if H_ASM='1' then
+						PRESENTE <= ESTADO2;
+					ELSE
+						If valor='*' then --&#42 hex
+							PRESENTE <=INICIO;
+						else valor='#' then --&#35  hex
+							---contador para el temporizador creo
+						end if;
+					END IF;		
+				WHEN ESTADO2 => 
+					Q0 <= valor;
+					Q1 <= Q0;
+					Q2 <= Q1;
+					Q3 <= Q2;
+				
+			END CASE;
+		END IF;
+	END PROCESS;
+end Behavioral;
