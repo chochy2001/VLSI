@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "selF",
+					"strict" : false
+				},
+				{
+					"name" : "Clk_p11",
+					"strict" : false
+				},
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue Apr  9 03:25:56 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : ADC
+Top-level Entity Name : pr
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 1,957 / 49,760 ( 4 % )
+    Total combinational functions : 1,924 / 49,760 ( 4 % )
+    Dedicated logic registers : 200 / 49,760 ( < 1 % )
+Total registers : 200
+Total pins : 6 / 360 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 768 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 1 / 2 ( 50 % )

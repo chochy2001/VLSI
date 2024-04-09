@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY dem is 
+port(txF,txC: in std_logic;
+	  sel: in std_logic;
+	  Tx: out std_logic);
+end dem;
+
+architecture HAPG of NEG is
+begin 
+
+with sel select
+	Tx <= txP when '0',
+			txN when '1';
+
+end dem;

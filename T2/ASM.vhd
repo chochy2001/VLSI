@@ -83,7 +83,7 @@ SIGNAL AUX2: INTEGER RANGE 0 TO 5000 := 0;
 					END IF;
 					
 				WHEN DELAY2 => 
-				IF AUX2 = 500 THEN
+				IF AUX2 = 5 THEN
 					AUX2 <= 0;
 					PRESENTE <= ESTADO3;
 				ELSE

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Apr  8 23:41:59 2024
+Analysis & Synthesis Status : Successful - Tue Apr  9 13:10:21 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : T2
 Top-level Entity Name : T2
 Family : MAX 10
-Total logic elements : 227
-    Total combinational functions : 227
+Total logic elements : 186
+    Total combinational functions : 186
     Dedicated logic registers : 68
 Total registers : 68
 Total pins : 42

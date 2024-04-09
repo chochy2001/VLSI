@@ -132,7 +132,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "columna[2]",
+					"name" : "columna[3]",
 					"strict" : false
 				},
 				{
@@ -140,11 +140,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "columna[0]",
+					"name" : "columna[2]",
 					"strict" : false
 				},
 				{
-					"name" : "columna[3]",
+					"name" : "columna[0]",
 					"strict" : false
 				},
 				{

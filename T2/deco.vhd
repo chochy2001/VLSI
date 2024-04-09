@@ -17,7 +17,53 @@ ARCHITECTURE am OF deco IS
 	Process(NUM1, NUM2, NUM3, NUM4)
 	BEGIN
 	
-		IF NUM4 = 0 THEN
+		IF NUM4 = 0 AND NUM3 = 0 AND NUM2 = 0 THEN
+			SEG4 <= "11111111";
+			SEG3 <= "11111111";
+			SEG2 <= "11111111";
+			CASE NUM1 IS
+				WHEN 0 => 		SEG1 <= "00000011";
+				WHEN 1 => 		SEG1 <= "10011111";
+				WHEN 2 => 		SEG1 <= "00100101";
+				WHEN 3 => 		SEG1 <= "00001101";
+				WHEN 4 => 		SEG1 <= "10011001";
+				WHEN 5 => 		SEG1 <= "01001001";
+				WHEN 6 => 		SEG1 <= "01000001";
+				WHEN 7 => 		SEG1 <= "00011101";
+				WHEN 8 => 		SEG1 <= "00000001";
+				WHEN OTHERS => SEG1 <= "00001001";
+			END CASE;
+		
+		ELSIF NUM4 = 0 AND NUM3 = 0 THEN
+			SEG4 <= "11111111";
+			SEG3 <= "11111111";
+			CASE NUM2 IS
+				WHEN 0 => 		SEG2 <= "00000011";
+				WHEN 1 => 		SEG2 <= "10011111";
+				WHEN 2 => 		SEG2 <= "00100101";
+				WHEN 3 => 		SEG2 <= "00001101";
+				WHEN 4 => 		SEG2 <= "10011001";
+				WHEN 5 => 		SEG2 <= "01001001";
+				WHEN 6 => 		SEG2 <= "01000001";
+				WHEN 7 => 		SEG2 <= "00011101";
+				WHEN 8 => 		SEG2 <= "00000001";
+				WHEN OTHERS => SEG2 <= "00001001";
+			END CASE;
+			
+			CASE NUM1 IS
+				WHEN 0 => 		SEG1 <= "00000011";
+				WHEN 1 => 		SEG1 <= "10011111";
+				WHEN 2 => 		SEG1 <= "00100101";
+				WHEN 3 => 		SEG1 <= "00001101";
+				WHEN 4 => 		SEG1 <= "10011001";
+				WHEN 5 => 		SEG1 <= "01001001";
+				WHEN 6 => 		SEG1 <= "01000001";
+				WHEN 7 => 		SEG1 <= "00011101";
+				WHEN 8 => 		SEG1 <= "00000001";
+				WHEN OTHERS => SEG1 <= "00001001";
+			END CASE;
+			
+		ELSIF NUM4 = 0 THEN
 			SEG4 <= "11111111";
 			CASE NUM3 IS
 				WHEN 0 => 		SEG3 <= "00000011";
@@ -57,57 +103,8 @@ ARCHITECTURE am OF deco IS
 				WHEN 8 => 		SEG1 <= "00000001";
 				WHEN OTHERS => SEG1 <= "00001001";
 			END CASE;
-		END IF;
 		
-		IF NUM4 = 0 AND NUM3 = 0 THEN
-			SEG4 <= "11111111";
-			SEG3 <= "11111111";
-			CASE NUM2 IS
-				WHEN 0 => 		SEG2 <= "00000011";
-				WHEN 1 => 		SEG2 <= "10011111";
-				WHEN 2 => 		SEG2 <= "00100101";
-				WHEN 3 => 		SEG2 <= "00001101";
-				WHEN 4 => 		SEG2 <= "10011001";
-				WHEN 5 => 		SEG2 <= "01001001";
-				WHEN 6 => 		SEG2 <= "01000001";
-				WHEN 7 => 		SEG2 <= "00011101";
-				WHEN 8 => 		SEG2 <= "00000001";
-				WHEN OTHERS => SEG2 <= "00001001";
-			END CASE;
-			
-			CASE NUM1 IS
-				WHEN 0 => 		SEG1 <= "00000011";
-				WHEN 1 => 		SEG1 <= "10011111";
-				WHEN 2 => 		SEG1 <= "00100101";
-				WHEN 3 => 		SEG1 <= "00001101";
-				WHEN 4 => 		SEG1 <= "10011001";
-				WHEN 5 => 		SEG1 <= "01001001";
-				WHEN 6 => 		SEG1 <= "01000001";
-				WHEN 7 => 		SEG1 <= "00011101";
-				WHEN 8 => 		SEG1 <= "00000001";
-				WHEN OTHERS => SEG1 <= "00001001";
-			END CASE;
-		END IF;
-		
-		IF NUM4 = 0 AND NUM3 = 0 AND NUM2 = 0 THEN
-			SEG4 <= "11111111";
-			SEG3 <= "11111111";
-			SEG2 <= "11111111";
-			CASE NUM1 IS
-				WHEN 0 => 		SEG1 <= "00000011";
-				WHEN 1 => 		SEG1 <= "10011111";
-				WHEN 2 => 		SEG1 <= "00100101";
-				WHEN 3 => 		SEG1 <= "00001101";
-				WHEN 4 => 		SEG1 <= "10011001";
-				WHEN 5 => 		SEG1 <= "01001001";
-				WHEN 6 => 		SEG1 <= "01000001";
-				WHEN 7 => 		SEG1 <= "00011101";
-				WHEN 8 => 		SEG1 <= "00000001";
-				WHEN OTHERS => SEG1 <= "00001001";
-			END CASE;
-		END IF;
-		
-		IF NUM4 > 0 AND NUM3 > 0 AND NUM2 > 0 THEN
+		ELSE
 		
 			CASE NUM4 IS
 				WHEN 0 => 		SEG4 <= "00000011";

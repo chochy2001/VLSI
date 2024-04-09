@@ -1,5 +1,5 @@
 Analysis & Synthesis report for T2
-Mon Apr  8 23:41:59 2024
+Tue Apr  9 13:10:21 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -14,13 +14,12 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |T2|ASM:inst|PRESENTE
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: divf:inst3
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: divf:inst3
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr  8 23:41:59 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr  9 13:10:21 2024          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; T2                                             ;
 ; Top-level Entity Name              ; T2                                             ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 227                                            ;
-;     Total combinational functions  ; 227                                            ;
+; Total logic elements               ; 186                                            ;
+;     Total combinational functions  ; 186                                            ;
 ;     Dedicated logic registers      ; 68                                             ;
 ; Total registers                    ; 68                                             ;
 ; Total pins                         ; 42                                             ;
@@ -165,8 +164,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -188,16 +186,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 227            ;
+; Estimated Total logic elements              ; 186            ;
 ;                                             ;                ;
-; Total combinational functions               ; 227            ;
+; Total combinational functions               ; 186            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 110            ;
-;     -- 3 input functions                    ; 53             ;
-;     -- <=2 input functions                  ; 64             ;
+;     -- 4 input functions                    ; 107            ;
+;     -- 3 input functions                    ; 20             ;
+;     -- <=2 input functions                  ; 59             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 189            ;
+;     -- normal mode                          ; 148            ;
 ;     -- arithmetic mode                      ; 38             ;
 ;                                             ;                ;
 ; Total registers                             ; 68             ;
@@ -210,8 +208,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; divf:inst3|CLK ;
 ; Maximum fan-out                             ; 53             ;
-; Total fan-out                               ; 968            ;
-; Average fan-out                             ; 2.55           ;
+; Total fan-out                               ; 847            ;
+; Average fan-out                             ; 2.51           ;
 +---------------------------------------------+----------------+
 
 
@@ -220,9 +218,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |T2                        ; 227 (0)             ; 68 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |T2                 ; T2          ; work         ;
-;    |ASM:inst|              ; 106 (106)           ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |T2|ASM:inst        ; ASM         ; work         ;
-;    |deco:inst1|            ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |T2|deco:inst1      ; deco        ; work         ;
+; |T2                        ; 186 (0)             ; 68 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |T2                 ; T2          ; work         ;
+;    |ASM:inst|              ; 101 (101)           ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |T2|ASM:inst        ; ASM         ; work         ;
+;    |deco:inst1|            ; 43 (43)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |T2|deco:inst1      ; deco        ; work         ;
 ;    |divf:inst3|            ; 27 (27)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |T2|divf:inst3      ; divf        ; work         ;
 ;    |teclado:inst2|         ; 15 (15)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |T2|teclado:inst2   ; teclado     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
@@ -242,44 +240,6 @@ Encoding Type:  One-Hot
 ; PRESENTE.DELAY   ; 0               ; 1              ; 0                ; 0                ; 0                ; 1               ;
 ; PRESENTE.DELAY2  ; 1               ; 0              ; 0                ; 0                ; 0                ; 1               ;
 +------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; deco:inst1|SEG1[7]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG1[6]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG1[5]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG1[4]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG1[3]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG1[2]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG1[1]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[7]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[6]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[5]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[4]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[3]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[2]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG2[1]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[7]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[6]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[5]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[4]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[3]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[2]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG3[1]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[7]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[6]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[5]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[4]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[3]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[2]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; deco:inst1|SEG4[1]                                  ; deco:inst1|SEG1[7]  ; yes                    ;
-; Number of user-specified and inferred latches = 28  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -302,12 +262,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |T2|teclado:inst2|CUENTA[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |T2|teclado:inst2|CUENTA[1] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |T2|ASM:inst|M[0]           ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |T2|ASM:inst|C[1]           ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |T2|ASM:inst|U[3]           ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |T2|ASM:inst|C[3]           ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |T2|ASM:inst|U[0]           ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |T2|ASM:inst|D[0]           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |T2|deco:inst1|SEG3[7]      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |T2|deco:inst1|SEG3[3]      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |T2|deco:inst1|SEG4[6]      ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |T2|ASM:inst|PRESENTE       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
@@ -331,18 +292,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 68                          ;
 ;     ENA               ; 34                          ;
 ;     plain             ; 34                          ;
-; cycloneiii_lcell_comb ; 228                         ;
+; cycloneiii_lcell_comb ; 187                         ;
 ;     arith             ; 38                          ;
 ;         2 data inputs ; 38                          ;
-;     normal            ; 190                         ;
+;     normal            ; 149                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 53                          ;
-;         4 data inputs ; 110                         ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 107                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.81                        ;
+; Average LUT depth     ; 2.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -361,7 +322,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Apr  8 23:41:40 2024
+    Info: Processing started: Tue Apr  9 13:10:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off T2 -c T2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -386,85 +347,7 @@ Info (12127): Elaborating entity "T2" for the top level hierarchy
 Info (12128): Elaborating entity "teclado" for hierarchy "teclado:inst2"
 Info (12128): Elaborating entity "divf" for hierarchy "divf:inst3"
 Info (12128): Elaborating entity "deco" for hierarchy "deco:inst1"
-Warning (10631): VHDL Process Statement warning at deco.vhd(17): inferring latch(es) for signal or variable "SEG4", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at deco.vhd(17): inferring latch(es) for signal or variable "SEG3", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at deco.vhd(17): inferring latch(es) for signal or variable "SEG2", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at deco.vhd(17): inferring latch(es) for signal or variable "SEG1", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[0]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[1]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[2]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[3]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[4]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[5]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[6]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG1[7]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[0]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[1]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[2]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[3]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[4]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[5]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[6]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG2[7]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[0]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[1]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[2]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[3]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[4]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[5]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[6]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG3[7]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[0]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[1]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[2]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[3]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[4]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[5]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[6]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-Info (10041): Inferred latch for "SEG4[7]" at deco.vhd(17) File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
 Info (12128): Elaborating entity "ASM" for hierarchy "ASM:inst"
-Warning (13012): Latch deco:inst1|SEG2[7] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG2[6] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG2[5] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG2[4] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG2[3] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG2[2] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG2[1] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|D[1] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[7] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[6] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[5] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[4] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[3] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[2] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG3[1] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|C[1] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[7] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[6] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[5] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[4] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[3] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[2] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[0] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
-Warning (13012): Latch deco:inst1|SEG4[1] has unsafe behavior File: C:/Users/joshu/Documents/VLSI/T2/deco.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ASM:inst|M[1] File: C:/Users/joshu/Documents/VLSI/T2/ASM.vhd Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SEG0[0]" is stuck at VCC
     Warning (13410): Pin "SEG1[0]" is stuck at VCC
@@ -473,14 +356,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 269 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 228 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 227 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Mon Apr  8 23:41:59 2024
+    Info (21061): Implemented 186 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Tue Apr  9 13:10:21 2024
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:23
 
 

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Apr  8 23:42:19 2024
+Fitter Status : Successful - Tue Apr  9 13:10:45 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : T2
 Top-level Entity Name : T2
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 229 / 49,760 ( < 1 % )
-    Total combinational functions : 228 / 49,760 ( < 1 % )
+Total logic elements : 188 / 49,760 ( < 1 % )
+    Total combinational functions : 187 / 49,760 ( < 1 % )
     Dedicated logic registers : 68 / 49,760 ( < 1 % )
 Total registers : 68
 Total pins : 42 / 360 ( 12 % )
