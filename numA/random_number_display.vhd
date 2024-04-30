@@ -1,0 +1,82 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all; -- Incluir esta biblioteca
+
+entity random_number_display is
+    port (
+        clk     : in  std_logic;
+        reset   : in  std_logic;
+        displays: out std_logic_vector(6 downto 0)
+    );
+end entity random_number_display;
+
+architecture rtl of random_number_display is
+    signal random_number : std_logic_vector(11 downto 0);
+    signal shift_register: std_logic_vector(11 downto 0);
+    signal digit_select   : std_logic_vector(1 downto 0);
+
+    -- Función para convertir un dígito BCD a un patrón de 7 segmentos
+    function bcd_to_seven_segment(bcd : std_logic_vector(3 downto 0))
+        return std_logic_vector is
+        variable segment_pattern : std_logic_vector(6 downto 0);
+    begin
+        case bcd is
+            when "0000" => segment_pattern := "1000000"; -- 0
+            when "0001" => segment_pattern := "1111001"; -- 1
+            when "0010" => segment_pattern := "0100100"; -- 2
+            when "0011" => segment_pattern := "0110000"; -- 3
+            when "0100" => segment_pattern := "0011001"; -- 4
+            when "0101" => segment_pattern := "0010010"; -- 5
+            when "0110" => segment_pattern := "0000010"; -- 6
+            when "0111" => segment_pattern := "1111000"; -- 7
+            when "1000" => segment_pattern := "0000000"; -- 8
+            when "1001" => segment_pattern := "0010000"; -- 9
+            when others => segment_pattern := "1111111"; -- Patrón para valores no válidos
+        end case;
+        return segment_pattern;
+    end function bcd_to_seven_segment;
+
+begin
+    -- Generador de números aleatorios
+    process(clk, reset)
+        variable seed1, seed2 : unsigned(31 downto 0) := X"12345678";
+        variable rand : unsigned(11 downto 0);
+    begin
+        if reset = '1' then
+            random_number <= (others => '0');
+        elsif rising_edge(clk) then
+            uniform(seed1, seed2, rand);
+            random_number <= std_logic_vector(rand);
+        end if;
+    end process;
+
+    -- Registro de desplazamiento PISO
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            shift_register <= (others => '0');
+            digit_select <= "00";
+        elsif rising_edge(clk) then
+            shift_register <= random_number;
+            digit_select <= digit_select + 1;
+        end if;
+    end process;
+
+    -- Decodificador de displays
+    process(shift_register, digit_select)
+        variable bcd_digit : std_logic_vector(3 downto 0);
+    begin
+        case digit_select is
+            when "00" =>
+                bcd_digit := shift_register(11 downto 8);
+            when "01" =>
+                bcd_digit := shift_register(7 downto 4);
+            when "10" =>
+                bcd_digit := shift_register(3 downto 0);
+            when others =>
+                bcd_digit := "0000";
+        end case;
+        displays <= bcd_to_seven_segment(bcd_digit);
+    end process;
+end architecture rtl;

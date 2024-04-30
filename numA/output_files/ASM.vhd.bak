@@ -1,0 +1,66 @@
+ Library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+entity ASM is
+	port(	CLK, HAB: in std_logic;
+			valor:  IN INTEGER RANGE 0 TO 15;---teclado
+			C,D, U: BUFFER INTEGER RANGE 0 TO 9);
+end entity;
+
+architecture Behavioral of ASM is
+
+TYPE ESTADOS IS (INICIO, ESTADO1, ESTADO2, ESTADO3, DELAY, DELAY2, DELAYLED);
+SIGNAL PRESENTE: ESTADOS := INICIO;
+SIGNAL AUXI:INTEGER RANGE 0 TO 8;
+SIGNAL AUX: INTEGER RANGE 0 TO 5000 := 0;
+signal random_number:  std_logic_vector (7 downto 0);
+signal internal_random_number : std_logic_vector (7 downto 0);
+
+	begin
+	PROCESS(CLK,H_ASM, valor)
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			CASE PRESENTE IS
+				WHEN INICIO => 
+					IF PRESENTE = INICIO THEN
+						U <= 0;
+						D <= 0;
+						C <= 0;
+						PRESENTE <= ESTADO1;
+					END IF;
+			
+				WHEN ESTADO1 => 
+					C <= D;
+					D <= U;
+					U <= valor;
+					
+					PRESENTE <= DELAY;
+			
+			
+				WHEN DELAY => 
+					IF AUX = 500 THEN
+						AUX <= 0;
+						PRESENTE <= ESTADO2;
+					ELSE
+						AUX <= AUX + 1;
+						PRESENTE <= DELAY;
+					END IF;
+			
+				WHEN ESTADO2=>
+					IF N1=C AND N2=D AND N3=U THEN
+						IF AUXI<3 THEN 
+							AUXI<=AUXI+1;
+							---MENSAJE 
+						ELSE
+							---MENSAJE DE "FIN"
+						END IF;
+					ELSE
+						--mensaje de "FAIL"
+					END IF;
+				WHEN ESTADO 3=>
+					random_number <= internal_random_number;
+			END CASE;
+		END IF;
+	END PROCESS;
+end Behavioral;
