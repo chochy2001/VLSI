@@ -1,37 +1,50 @@
-
-# Quartus compilation output
+# Quartus specific
 db/
 incremental_db/
 output_files/
 simulation/
-hps_isw_handoff/
-
-# Temporary files created by Quartus
-*.rpt
+quartus.ini
+*.qpf
+*.qsf
+*.qws
+*.ddb
+greybox_tmp/
+*.rdb
+*.ddb
 *.chg
+*.dpf
+*.jdi
+
+# Synthesis files
+*.eqn
+*.sof
+*.pof
+
+# Temporales
+*.bak
+*~
+
+# Logs
+*.rpt
 *.summary
 *.smsg
-*.qws
+*.qdz
 *.done
-*.jdi
-*.map
-*.dpf
-*.pin
-*.bak
-*.qws
-*.bsf
+*.txt
 
-# Other files to ignore
-*.sof
-*.rbf
-Greybox_tmp/
-*.ttf
-*.dpb
-c5_pin_model_dump.txt
-hps_sdram_p0_all_pins.txt
-hps_sdram_p0_summary.csv
-hps_sdram_p0.pin
-pll_config/
-temp/
-*~
-*.bak
+# Nativelink
+*.cdf
+
+# Archivos específicos de simulación
+*.sdo
+*.vcd
+*.wlf
+
+# Otros archivos que suelen excluirse
+.cproject
+.project
+.settings/
+*.tmp
+*.history
+*.pyc
+/__pycache__/
