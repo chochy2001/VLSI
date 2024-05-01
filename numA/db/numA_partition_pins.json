@@ -208,10 +208,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "hab",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},

@@ -4,16 +4,17 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity ASM is
 	port(	valor:  IN std_logic_vector(3 downto 0);---teclado
-			CLK,rst,prob,hab: in std_logic;
+			CLK,rst,prob: in std_logic;
 			dec: out  std_logic;
 			N1,N2,N3,C,D, U: BUFFER std_logic_vector(3 downto 0);
 			M, M2, M3: in std_logic_vector(7 downto 0);--MENSAJE 
-			L0,L1, L2, L3, L4, L5: buffer std_logic_vector(7 downto 0));
+			L0,L1, L2, L3, L4, L5: buffer std_logic_vector(7 downto 0);
+			TECLADOHAB: in std_logic);
 end entity;
 
 architecture Behavioral of ASM is
 
-TYPE ESTADOS IS (INICIO, ESTADO1, ESTADO2, DELAY, DELAY2, DELAYLED,temporal,edo3,ESTADO4,DELAY4,PRUEBA,LOGRADO, WIND);
+TYPE ESTADOS IS (INICIO, ESTADO0, ESTADO1, ESTADO2, DELAY, DELAY2, DELAYLED,temporal,edo3,ESTADO4,DELAY4,PRUEBA,LOGRADO, WIND);
 SIGNAL PRESENTE: ESTADOS := INICIO;
 SIGNAL AUXI:INTEGER RANGE 0 TO 8;
 SIGNAL AUX, AUX2, AUXLED: INTEGER RANGE 0 TO 10000000 := 0;
@@ -32,40 +33,43 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 					WHEN INICIO => 
 					dec<='1';
 						IF PRESENTE = INICIO THEN---generacion de numeros aleatorios 
-							if hab='1' then
-								 U <= "1010";
-								 D <= "1010";
-								 C <= "1010";
-								 N1 <= "1010";
-								 N2<= "1010";
-								 N3<= "1010";
-								  seed1 := X"000001";
-									seed2 := X"9823AB";
-									seed3 := X"123456";
-									random_value <= (others => '0');
-								 AUXI<=0;
-							elsif hab='0' then
-								seed1 := seed1 xor (seed1(4) xor seed1(3)) & seed1(23 downto 1);
-								seed2 := seed2 xor (seed2(6) xor seed2(2)) & seed2(23 downto 1);
-								seed3 := seed3 xor (seed3(9) xor seed3(8)) & seed3(23 downto 1);
-								random_value <= seed1 xor seed2 xor seed3;
-								N1 <= random_value(3 downto 0);
-								N2 <= random_value(7 downto 4);
-								N3 <= random_value(11 downto 8);
-								
-								V1:=N1;
-								V2:=N2;
-								V3:=N3;
-	
-								PRESENTE <= DELAYLED;
-							end if;
+							 U <= "1010";
+							 D <= "1010";
+							 C <= "1010";
+							 N1 <= "1010";
+							 N2<= "1010";
+							 N3<= "1010";
+							 seed1 := X"000001";
+							 seed2 := X"9823AB";
+							 seed3 := X"123456";
+							 random_value <= (others => '0');
+							 AUXI<=0;
+							 PRESENTE <= ESTADO0;
 						END IF;
+						
+					WHEN ESTADO0 =>
+						seed1 := seed1 xor (seed1(4) xor seed1(3)) & seed1(23 downto 1);
+						seed2 := seed2 xor (seed2(6) xor seed2(2)) & seed2(23 downto 1);
+						seed3 := seed3 xor (seed3(9) xor seed3(8)) & seed3(23 downto 1);
+						random_value <= seed1 xor seed2 xor seed3;
+						N1 <= random_value(3 downto 0);
+						N2 <= random_value(7 downto 4);
+						N3 <= random_value(11 downto 8);
+						
+						V1:=N1;
+						V2:=N2;
+						V3:=N3;
+						PRESENTE <= DELAYLED;
 				
 					WHEN ESTADO1 => --INGRESAR VALORES TECLADO 
-						C <= D;
-						D <= U;
-						U <= "0001";---VALOR;
-						PRESENTE <= DELAY;
+						IF TECLADOHAB = '1' THEN
+							U <= VALOR;---"0001";
+							D <= U;
+							C <= D;
+							PRESENTE <= DELAY;
+						ELSE 
+							PRESENTE <= DELAY;
+						END IF;
 				
 				
 					WHEN DELAY => 
@@ -76,11 +80,12 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 							AUX <= AUX + 1;
 							PRESENTE <= DELAY;
 						END IF;
+						
 					when temporal =>
 						if rst='1' then 
 							presente<= estado1;
 						elsif rst='0' then 
-							presente<=prueba;---ESTADO2;
+							presente<=ESTADO2;---ESTADO2;
 						end if;
 						
 					
@@ -106,7 +111,7 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						D<=D;
 						C<=C;
 					elsif prob='0' then 
-						dec<='0';
+						dec<='0'; 
 								
 						IF V1=U AND V2=D AND V3=C THEN
 								 U <= "1010";

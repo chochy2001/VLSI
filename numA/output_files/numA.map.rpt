@@ -1,6 +1,6 @@
 Analysis & Synthesis report for numA
-Tue Apr 30 01:59:47 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Tue Apr 30 23:08:33 2024
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
 ---------------------
@@ -15,14 +15,13 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |numA|ASM:inst9|PRESENTE
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: divf:inst15
- 14. Parameter Settings for User Entity Instance: divf:inst3
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: divf:inst15
+ 13. Parameter Settings for User Entity Instance: divf:inst3
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +48,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 30 01:59:47 2024          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 30 23:08:33 2024          ;
+; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; numA                                           ;
 ; Top-level Entity Name              ; numA                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 627                                            ;
-;     Total combinational functions  ; 591                                            ;
-;     Dedicated logic registers      ; 291                                            ;
-; Total registers                    ; 291                                            ;
-; Total pins                         ; 60                                             ;
+; Total logic elements               ; 651                                            ;
+;     Total combinational functions  ; 603                                            ;
+;     Dedicated logic registers      ; 297                                            ;
+; Total registers                    ; 297                                            ;
+; Total pins                         ; 59                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -172,21 +171,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+---------+
-; divf.vhd                         ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/divf.vhd                 ;         ;
-; conta.vhd                        ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/conta.vhd                ;         ;
-; numA.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/VLSI/numA/numA.bdf                 ;         ;
-; output_files/teclado.vhd         ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/output_files/teclado.vhd ;         ;
-; output_files/ASM.vhd             ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/output_files/ASM.vhd     ;         ;
-; rom.vhd                          ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/rom.vhd                  ;         ;
-; abc.vhd                          ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/abc.vhd                  ;         ;
-; rom1.vhd                         ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/rom1.vhd                 ;         ;
-; rom2.vhd                         ; yes             ; User VHDL File                     ; D:/Quartus/VLSI/numA/rom2.vhd                 ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
+; divf.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/divf.vhd                 ;         ;
+; conta.vhd                        ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/conta.vhd                ;         ;
+; numA.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/joshu/Documents/VLSI/numA/numA.bdf                 ;         ;
+; output_files/teclado.vhd         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/output_files/teclado.vhd ;         ;
+; output_files/ASM.vhd             ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/output_files/ASM.vhd     ;         ;
+; rom.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom.vhd                  ;         ;
+; abc.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/abc.vhd                  ;         ;
+; rom1.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom1.vhd                 ;         ;
+; rom2.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom2.vhd                 ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -194,30 +193,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 627             ;
+; Estimated Total logic elements              ; 651             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 591             ;
+; Total combinational functions               ; 603             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 305             ;
-;     -- 3 input functions                    ; 106             ;
-;     -- <=2 input functions                  ; 180             ;
+;     -- 4 input functions                    ; 387             ;
+;     -- 3 input functions                    ; 54              ;
+;     -- <=2 input functions                  ; 162             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 485             ;
+;     -- normal mode                          ; 497             ;
 ;     -- arithmetic mode                      ; 106             ;
 ;                                             ;                 ;
-; Total registers                             ; 291             ;
-;     -- Dedicated logic registers            ; 291             ;
+; Total registers                             ; 297             ;
+;     -- Dedicated logic registers            ; 297             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 60              ;
+; I/O pins                                    ; 59              ;
 ;                                             ;                 ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; divf:inst15|CLK ;
-; Maximum fan-out                             ; 249             ;
-; Total fan-out                               ; 2884            ;
-; Average fan-out                             ; 2.88            ;
+; Maximum fan-out                             ; 255             ;
+; Total fan-out                               ; 2961            ;
+; Average fan-out                             ; 2.91            ;
 +---------------------------------------------+-----------------+
 
 
@@ -226,43 +225,46 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |numA                      ; 591 (0)             ; 291 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 60   ; 0            ; 0          ; |numA               ; numA        ; work         ;
-;    |ASM:inst9|             ; 303 (303)           ; 244 (244)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|ASM:inst9     ; ASM         ; work         ;
-;    |abc:inst16|            ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst16    ; abc         ; work         ;
-;    |abc:inst17|            ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst17    ; abc         ; work         ;
-;    |abc:inst18|            ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst18    ; abc         ; work         ;
+; |numA                      ; 603 (0)             ; 297 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 59   ; 0            ; 0          ; |numA               ; numA        ; work         ;
+;    |ASM:inst9|             ; 294 (294)           ; 250 (250)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|ASM:inst9     ; ASM         ; work         ;
+;    |abc:inst16|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst16    ; abc         ; work         ;
+;    |abc:inst17|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst17    ; abc         ; work         ;
+;    |abc:inst18|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst18    ; abc         ; work         ;
 ;    |abc:inst19|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst19    ; abc         ; work         ;
 ;    |abc:inst20|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst20    ; abc         ; work         ;
 ;    |abc:inst21|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst21    ; abc         ; work         ;
 ;    |conta:inst13|          ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|conta:inst13  ; conta       ; work         ;
 ;    |divf:inst15|           ; 27 (27)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|divf:inst15   ; divf        ; work         ;
 ;    |divf:inst3|            ; 40 (40)             ; 23 (23)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|divf:inst3    ; divf        ; work         ;
-;    |rom1:inst11|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom1:inst11   ; rom1        ; work         ;
-;    |rom2:inst12|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom2:inst12   ; rom2        ; work         ;
-;    |rom:inst10|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom:inst10    ; rom         ; work         ;
-;    |teclado:inst|          ; 11 (11)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|teclado:inst  ; teclado     ; work         ;
+;    |rom1:inst11|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom1:inst11   ; rom1        ; work         ;
+;    |rom2:inst12|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom2:inst12   ; rom2        ; work         ;
+;    |rom:inst10|            ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom:inst10    ; rom         ; work         ;
+;    |teclado:inst|          ; 15 (15)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|teclado:inst  ; teclado     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |numA|ASM:inst9|PRESENTE                                                                                                                                                                                    ;
-+-------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+-----------------+
-; Name              ; PRESENTE.PRUEBA ; PRESENTE.DELAY4 ; PRESENTE.ESTADO4 ; PRESENTE.edo3 ; PRESENTE.temporal ; PRESENTE.DELAYLED ; PRESENTE.DELAY2 ; PRESENTE.DELAY ; PRESENTE.ESTADO2 ; PRESENTE.ESTADO1 ; PRESENTE.INICIO ;
-+-------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+-----------------+
-; PRESENTE.INICIO   ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0               ;
-; PRESENTE.ESTADO1  ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 1                ; 1               ;
-; PRESENTE.ESTADO2  ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 1                ; 0                ; 1               ;
-; PRESENTE.DELAY    ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 1              ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAY2   ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 1               ; 0              ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAYLED ; 0               ; 0               ; 0                ; 0             ; 0                 ; 1                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
-; PRESENTE.temporal ; 0               ; 0               ; 0                ; 0             ; 1                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
-; PRESENTE.edo3     ; 0               ; 0               ; 0                ; 1             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
-; PRESENTE.ESTADO4  ; 0               ; 0               ; 1                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAY4   ; 0               ; 1               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
-; PRESENTE.PRUEBA   ; 1               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
-+-------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |numA|ASM:inst9|PRESENTE                                                                                                                                                                                                                                          ;
++-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
+; Name              ; PRESENTE.WIND ; PRESENTE.LOGRADO ; PRESENTE.PRUEBA ; PRESENTE.DELAY4 ; PRESENTE.ESTADO4 ; PRESENTE.edo3 ; PRESENTE.temporal ; PRESENTE.DELAYLED ; PRESENTE.DELAY2 ; PRESENTE.DELAY ; PRESENTE.ESTADO2 ; PRESENTE.ESTADO1 ; PRESENTE.ESTADO0 ; PRESENTE.INICIO ;
++-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
+; PRESENTE.INICIO   ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 0               ;
+; PRESENTE.ESTADO0  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1                ; 1               ;
+; PRESENTE.ESTADO1  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 1                ; 0                ; 1               ;
+; PRESENTE.ESTADO2  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 1                ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAY    ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 1              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAY2   ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 1               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAYLED ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 1                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.temporal ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 1                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.edo3     ; 0             ; 0                ; 0               ; 0               ; 0                ; 1             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.ESTADO4  ; 0             ; 0                ; 0               ; 0               ; 1                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAY4   ; 0             ; 0                ; 0               ; 1               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.PRUEBA   ; 0             ; 0                ; 1               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.LOGRADO  ; 0             ; 1                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
+; PRESENTE.WIND     ; 1             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
++-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -273,29 +275,16 @@ Encoding Type:  One-Hot
 ; ASM:inst9|L0[7]                        ; Merged with ASM:inst9|L0[6]            ;
 ; ASM:inst9|L1[7]                        ; Merged with ASM:inst9|L1[6]            ;
 ; ASM:inst9|L2[7]                        ; Merged with ASM:inst9|L2[6]            ;
-; ASM:inst9|C[3]                         ; Merged with ASM:inst9|C[1]             ;
 ; ASM:inst9|L3[7]                        ; Merged with ASM:inst9|L3[6]            ;
-; ASM:inst9|D[3]                         ; Merged with ASM:inst9|D[1]             ;
 ; ASM:inst9|L4[7]                        ; Merged with ASM:inst9|L4[6]            ;
-; ASM:inst9|U[3]                         ; Merged with ASM:inst9|U[1]             ;
 ; ASM:inst9|L5[7]                        ; Merged with ASM:inst9|L5[6]            ;
-; ASM:inst9|U[2]                         ; Stuck at GND due to stuck port data_in ;
-; ASM:inst9|D[2]                         ; Stuck at GND due to stuck port data_in ;
-; ASM:inst9|C[2]                         ; Stuck at GND due to stuck port data_in ;
+; ASM:inst9|PRESENTE.PRUEBA              ; Stuck at GND due to stuck port data_in ;
+; ASM:inst9|PRESENTE.WIND                ; Stuck at GND due to stuck port data_in ;
 ; divf:inst3|AUX[0]                      ; Merged with divf:inst15|AUX[0]         ;
 ; divf:inst3|AUX[1]                      ; Merged with divf:inst15|AUX[1]         ;
-; Total Number of Removed Registers = 14 ;                                        ;
+; ASM:inst9|AUXI[3]                      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11 ;                                        ;
 +----------------------------------------+----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                         ;
-+----------------+---------------------------+----------------------------------------+
-; Register name  ; Reason for Removal        ; Registers Removed due to This Register ;
-+----------------+---------------------------+----------------------------------------+
-; ASM:inst9|D[2] ; Stuck at GND              ; ASM:inst9|C[2]                         ;
-;                ; due to stuck port data_in ;                                        ;
-+----------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -303,12 +292,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 291   ;
-; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 12    ;
+; Total registers                              ; 297   ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 13    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 225   ;
+; Number of registers using Clock Enable       ; 181   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -318,20 +307,16 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |numA|ASM:inst9|AUX2[6]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |numA|teclado:inst|CUENTA[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |numA|ASM:inst9|L0[1]        ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |numA|ASM:inst9|V2[0]        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |numA|ASM:inst9|AUXI[1]      ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst9|AUX[17]      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |numA|ASM:inst9|C[2]         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |numA|ASM:inst9|U[0]         ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 12 LEs               ; 48 LEs                 ; Yes        ; |numA|ASM:inst9|N1[1]        ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |numA|ASM:inst9|D[0]         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |numA|abc:inst18|SAL[2]      ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |numA|abc:inst17|SAL[2]      ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |numA|abc:inst16|SAL[2]      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |numA|ASM:inst9|L0           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |numA|ASM:inst9|AUX2[2]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |numA|teclado:inst|CUENTA[1] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |numA|ASM:inst9|V3[0]        ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |numA|ASM:inst9|seed3[13]    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |numA|ASM:inst9|L0[2]        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |numA|ASM:inst9|D[2]         ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst9|AUX[18]      ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; Yes        ; |numA|ASM:inst9|N2[1]        ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |numA|ASM:inst9|D[0]         ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |numA|ASM:inst9|PRESENTE     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
@@ -360,24 +345,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 60                          ;
-; cycloneiii_ff         ; 291                         ;
-;     ENA               ; 149                         ;
-;     ENA SCLR          ; 64                          ;
-;     ENA SLD           ; 12                          ;
-;     plain             ; 66                          ;
-; cycloneiii_lcell_comb ; 592                         ;
+; boundary_port         ; 59                          ;
+; cycloneiii_ff         ; 297                         ;
+;     ENA               ; 132                         ;
+;     ENA SCLR          ; 36                          ;
+;     ENA SLD           ; 13                          ;
+;     plain             ; 116                         ;
+; cycloneiii_lcell_comb ; 604                         ;
 ;     arith             ; 106                         ;
 ;         2 data inputs ; 106                         ;
-;     normal            ; 486                         ;
+;     normal            ; 498                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 67                          ;
-;         3 data inputs ; 106                         ;
-;         4 data inputs ; 305                         ;
+;         2 data inputs ; 49                          ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 387                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.84                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -386,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -395,43 +380,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Apr 30 01:59:21 2024
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Tue Apr 30 23:08:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off numA -c numA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file random_numbers.vhd
-    Info (12022): Found design unit 1: random_numbers-rtl File: D:/Quartus/VLSI/numA/random_numbers.vhd Line: 16
-    Info (12023): Found entity 1: random_numbers File: D:/Quartus/VLSI/numA/random_numbers.vhd Line: 6
+    Info (12022): Found design unit 1: random_numbers-rtl File: C:/Users/joshu/Documents/VLSI/numA/random_numbers.vhd Line: 16
+    Info (12023): Found entity 1: random_numbers File: C:/Users/joshu/Documents/VLSI/numA/random_numbers.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file divf.vhd
-    Info (12022): Found design unit 1: divf-BEAS File: D:/Quartus/VLSI/numA/divf.vhd Line: 13
-    Info (12023): Found entity 1: divf File: D:/Quartus/VLSI/numA/divf.vhd Line: 4
+    Info (12022): Found design unit 1: divf-BEAS File: C:/Users/joshu/Documents/VLSI/numA/divf.vhd Line: 13
+    Info (12023): Found entity 1: divf File: C:/Users/joshu/Documents/VLSI/numA/divf.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conta.vhd
-    Info (12022): Found design unit 1: conta-BEAS File: D:/Quartus/VLSI/numA/conta.vhd Line: 11
-    Info (12023): Found entity 1: conta File: D:/Quartus/VLSI/numA/conta.vhd Line: 6
+    Info (12022): Found design unit 1: conta-BEAS File: C:/Users/joshu/Documents/VLSI/numA/conta.vhd Line: 11
+    Info (12023): Found entity 1: conta File: C:/Users/joshu/Documents/VLSI/numA/conta.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file numa.bdf
     Info (12023): Found entity 1: numA
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/repaso.vhd
-    Info (12022): Found design unit 1: repaso-BEAS File: D:/Quartus/VLSI/numA/output_files/repaso.vhd Line: 12
-    Info (12023): Found entity 1: repaso File: D:/Quartus/VLSI/numA/output_files/repaso.vhd Line: 5
+    Info (12022): Found design unit 1: repaso-BEAS File: C:/Users/joshu/Documents/VLSI/numA/output_files/repaso.vhd Line: 12
+    Info (12023): Found entity 1: repaso File: C:/Users/joshu/Documents/VLSI/numA/output_files/repaso.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/teclado.vhd
-    Info (12022): Found design unit 1: teclado-BEAS File: D:/Quartus/VLSI/numA/output_files/teclado.vhd Line: 14
-    Info (12023): Found entity 1: teclado File: D:/Quartus/VLSI/numA/output_files/teclado.vhd Line: 7
+    Info (12022): Found design unit 1: teclado-BEAS File: C:/Users/joshu/Documents/VLSI/numA/output_files/teclado.vhd Line: 16
+    Info (12023): Found entity 1: teclado File: C:/Users/joshu/Documents/VLSI/numA/output_files/teclado.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/asm.vhd
-    Info (12022): Found design unit 1: ASM-Behavioral File: D:/Quartus/VLSI/numA/output_files/ASM.vhd Line: 14
-    Info (12023): Found entity 1: ASM File: D:/Quartus/VLSI/numA/output_files/ASM.vhd Line: 5
+    Info (12022): Found design unit 1: ASM-Behavioral File: C:/Users/joshu/Documents/VLSI/numA/output_files/ASM.vhd Line: 15
+    Info (12023): Found entity 1: ASM File: C:/Users/joshu/Documents/VLSI/numA/output_files/ASM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: rom-BEAS File: D:/Quartus/VLSI/numA/rom.vhd Line: 10
-    Info (12023): Found entity 1: rom File: D:/Quartus/VLSI/numA/rom.vhd Line: 5
+    Info (12022): Found design unit 1: rom-BEAS File: C:/Users/joshu/Documents/VLSI/numA/rom.vhd Line: 10
+    Info (12023): Found entity 1: rom File: C:/Users/joshu/Documents/VLSI/numA/rom.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file abc.vhd
-    Info (12022): Found design unit 1: abc-BEAS File: D:/Quartus/VLSI/numA/abc.vhd Line: 12
-    Info (12023): Found entity 1: abc File: D:/Quartus/VLSI/numA/abc.vhd Line: 5
+    Info (12022): Found design unit 1: abc-BEAS File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 12
+    Info (12023): Found entity 1: abc File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom1.vhd
-    Info (12022): Found design unit 1: rom1-BEAS File: D:/Quartus/VLSI/numA/rom1.vhd Line: 10
-    Info (12023): Found entity 1: rom1 File: D:/Quartus/VLSI/numA/rom1.vhd Line: 5
+    Info (12022): Found design unit 1: rom1-BEAS File: C:/Users/joshu/Documents/VLSI/numA/rom1.vhd Line: 10
+    Info (12023): Found entity 1: rom1 File: C:/Users/joshu/Documents/VLSI/numA/rom1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom2.vhd
-    Info (12022): Found design unit 1: rom2-BEAS File: D:/Quartus/VLSI/numA/rom2.vhd Line: 10
-    Info (12023): Found entity 1: rom2 File: D:/Quartus/VLSI/numA/rom2.vhd Line: 5
+    Info (12022): Found design unit 1: rom2-BEAS File: C:/Users/joshu/Documents/VLSI/numA/rom2.vhd Line: 10
+    Info (12023): Found entity 1: rom2 File: C:/Users/joshu/Documents/VLSI/numA/rom2.vhd Line: 5
 Info (12127): Elaborating entity "numA" for the top level hierarchy
 Warning (275083): Bus "M2[7..0]" found using same base name as "M", which might lead to a name conflict.
 Warning (275083): Bus "M3[7..0]" found using same base name as "M", which might lead to a name conflict.
@@ -445,15 +430,15 @@ Warning (275011): Block or symbol "rom" of instance "inst10" overlaps another bl
 Info (12128): Elaborating entity "teclado" for hierarchy "teclado:inst"
 Info (12128): Elaborating entity "divf" for hierarchy "divf:inst15"
 Info (12128): Elaborating entity "abc" for hierarchy "abc:inst21"
-Warning (10631): VHDL Process Statement warning at abc.vhd(14): inferring latch(es) for signal or variable "SAL", which holds its previous value in one or more paths through the process File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[0]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[1]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[2]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[3]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[4]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[5]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[6]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
-Info (10041): Inferred latch for "SAL[7]" at abc.vhd(14) File: D:/Quartus/VLSI/numA/abc.vhd Line: 14
+Warning (10631): VHDL Process Statement warning at abc.vhd(14): inferring latch(es) for signal or variable "SAL", which holds its previous value in one or more paths through the process File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[0]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[1]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[2]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[3]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[4]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[5]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[6]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
+Info (10041): Inferred latch for "SAL[7]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
 Info (12128): Elaborating entity "ASM" for hierarchy "ASM:inst9"
 Info (12128): Elaborating entity "rom" for hierarchy "rom:inst10"
 Info (12128): Elaborating entity "conta" for hierarchy "conta:inst13"
@@ -470,14 +455,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 689 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+Info (21057): Implemented 711 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 629 logic cells
+    Info (21061): Implemented 652 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Tue Apr 30 01:59:47 2024
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Tue Apr 30 23:08:33 2024
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:24
 
 
