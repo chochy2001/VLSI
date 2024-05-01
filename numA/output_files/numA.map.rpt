@@ -1,5 +1,5 @@
 Analysis & Synthesis report for numA
-Tue Apr 30 23:08:33 2024
+Wed May  1 00:56:00 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 30 23:08:33 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed May  1 00:56:00 2024          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; numA                                           ;
 ; Top-level Entity Name              ; numA                                           ;
@@ -171,21 +171,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
-; divf.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/divf.vhd                 ;         ;
-; conta.vhd                        ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/conta.vhd                ;         ;
-; numA.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/joshu/Documents/VLSI/numA/numA.bdf                 ;         ;
-; output_files/teclado.vhd         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/output_files/teclado.vhd ;         ;
-; output_files/ASM.vhd             ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/output_files/ASM.vhd     ;         ;
-; rom.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom.vhd                  ;         ;
-; abc.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/abc.vhd                  ;         ;
-; rom1.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom1.vhd                 ;         ;
-; rom2.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom2.vhd                 ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------+---------+
+; teclado.vhd                      ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/teclado.vhd ;         ;
+; ASM.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/ASM.vhd     ;         ;
+; divf.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/divf.vhd    ;         ;
+; conta.vhd                        ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/conta.vhd   ;         ;
+; numA.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/joshu/Documents/VLSI/numA/numA.bdf    ;         ;
+; rom.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom.vhd     ;         ;
+; abc.vhd                          ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/abc.vhd     ;         ;
+; rom1.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom1.vhd    ;         ;
+; rom2.vhd                         ; yes             ; User VHDL File                     ; C:/Users/joshu/Documents/VLSI/numA/rom2.vhd    ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -371,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -381,10 +381,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Apr 30 23:08:08 2024
+    Info: Processing started: Wed May  1 00:55:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off numA -c numA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file teclado.vhd
+    Info (12022): Found design unit 1: teclado-BEAS File: C:/Users/joshu/Documents/VLSI/numA/teclado.vhd Line: 16
+    Info (12023): Found entity 1: teclado File: C:/Users/joshu/Documents/VLSI/numA/teclado.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file repaso.vhd
+    Info (12022): Found design unit 1: repaso-BEAS File: C:/Users/joshu/Documents/VLSI/numA/repaso.vhd Line: 12
+    Info (12023): Found entity 1: repaso File: C:/Users/joshu/Documents/VLSI/numA/repaso.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file asm.vhd
+    Info (12022): Found design unit 1: ASM-Behavioral File: C:/Users/joshu/Documents/VLSI/numA/ASM.vhd Line: 15
+    Info (12023): Found entity 1: ASM File: C:/Users/joshu/Documents/VLSI/numA/ASM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file random_numbers.vhd
     Info (12022): Found design unit 1: random_numbers-rtl File: C:/Users/joshu/Documents/VLSI/numA/random_numbers.vhd Line: 16
     Info (12023): Found entity 1: random_numbers File: C:/Users/joshu/Documents/VLSI/numA/random_numbers.vhd Line: 6
@@ -396,15 +405,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file conta.v
     Info (12023): Found entity 1: conta File: C:/Users/joshu/Documents/VLSI/numA/conta.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file numa.bdf
     Info (12023): Found entity 1: numA
-Info (12021): Found 2 design units, including 1 entities, in source file output_files/repaso.vhd
-    Info (12022): Found design unit 1: repaso-BEAS File: C:/Users/joshu/Documents/VLSI/numA/output_files/repaso.vhd Line: 12
-    Info (12023): Found entity 1: repaso File: C:/Users/joshu/Documents/VLSI/numA/output_files/repaso.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file output_files/teclado.vhd
-    Info (12022): Found design unit 1: teclado-BEAS File: C:/Users/joshu/Documents/VLSI/numA/output_files/teclado.vhd Line: 16
-    Info (12023): Found entity 1: teclado File: C:/Users/joshu/Documents/VLSI/numA/output_files/teclado.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file output_files/asm.vhd
-    Info (12022): Found design unit 1: ASM-Behavioral File: C:/Users/joshu/Documents/VLSI/numA/output_files/ASM.vhd Line: 15
-    Info (12023): Found entity 1: ASM File: C:/Users/joshu/Documents/VLSI/numA/output_files/ASM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
     Info (12022): Found design unit 1: rom-BEAS File: C:/Users/joshu/Documents/VLSI/numA/rom.vhd Line: 10
     Info (12023): Found entity 1: rom File: C:/Users/joshu/Documents/VLSI/numA/rom.vhd Line: 5
@@ -460,9 +460,9 @@ Info (21057): Implemented 711 device resources after synthesis - the final resou
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 652 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Tue Apr 30 23:08:33 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Wed May  1 00:56:00 2024
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:00:27
 
 
