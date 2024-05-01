@@ -1,9 +1,10 @@
 # Quartus compilation output
-db/
-incremental_db/
-output_files/
-simulation/
-hps_isw_handoff/
+**/db/
+**/incremental_db/
+**/output_files/
+**/simulation/
+**/hps_isw_handoff/
+**/reports/
 
 # Temporary files created by Quartus
 *.rpt
