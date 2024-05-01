@@ -1,0 +1,37 @@
+
+# Quartus compilation output
+db/
+incremental_db/
+output_files/
+simulation/
+hps_isw_handoff/
+
+# Temporary files created by Quartus
+*.rpt
+*.chg
+*.summary
+*.smsg
+*.qws
+*.done
+*.jdi
+*.map
+*.dpf
+*.pin
+*.bak
+*.qws
+*.bsf
+
+# Other files to ignore
+*.sof
+*.rbf
+Greybox_tmp/
+*.ttf
+*.dpb
+c5_pin_model_dump.txt
+hps_sdram_p0_all_pins.txt
+hps_sdram_p0_summary.csv
+hps_sdram_p0.pin
+pll_config/
+temp/
+*~
+*.bak
