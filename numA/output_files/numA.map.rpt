@@ -1,5 +1,5 @@
 Analysis & Synthesis report for numA
-Wed May  1 00:56:00 2024
+Wed May  1 13:02:08 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |numA|ASM:inst9|PRESENTE
+  8. State Machine - |numA|ASM:inst1|PRESENTE
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -48,16 +48,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May  1 00:56:00 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed May  1 13:02:08 2024          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; numA                                           ;
 ; Top-level Entity Name              ; numA                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 651                                            ;
-;     Total combinational functions  ; 603                                            ;
+; Total logic elements               ; 649                                            ;
+;     Total combinational functions  ; 602                                            ;
 ;     Dedicated logic registers      ; 297                                            ;
 ; Total registers                    ; 297                                            ;
-; Total pins                         ; 59                                             ;
+; Total pins                         ; 60                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -193,30 +193,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 651             ;
+; Estimated Total logic elements              ; 649             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 603             ;
+; Total combinational functions               ; 602             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 387             ;
-;     -- 3 input functions                    ; 54              ;
-;     -- <=2 input functions                  ; 162             ;
+;     -- 4 input functions                    ; 336             ;
+;     -- 3 input functions                    ; 96              ;
+;     -- <=2 input functions                  ; 170             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 497             ;
+;     -- normal mode                          ; 496             ;
 ;     -- arithmetic mode                      ; 106             ;
 ;                                             ;                 ;
 ; Total registers                             ; 297             ;
 ;     -- Dedicated logic registers            ; 297             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 59              ;
+; I/O pins                                    ; 60              ;
 ;                                             ;                 ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; divf:inst15|CLK ;
 ; Maximum fan-out                             ; 255             ;
-; Total fan-out                               ; 2961            ;
-; Average fan-out                             ; 2.91            ;
+; Total fan-out                               ; 2980            ;
+; Average fan-out                             ; 2.92            ;
 +---------------------------------------------+-----------------+
 
 
@@ -225,8 +225,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |numA                      ; 603 (0)             ; 297 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 59   ; 0            ; 0          ; |numA               ; numA        ; work         ;
-;    |ASM:inst9|             ; 294 (294)           ; 250 (250)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|ASM:inst9     ; ASM         ; work         ;
+; |numA                      ; 602 (0)             ; 297 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 60   ; 0            ; 0          ; |numA               ; numA        ; work         ;
+;    |ASM:inst1|             ; 293 (293)           ; 250 (250)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|ASM:inst1     ; ASM         ; work         ;
 ;    |abc:inst16|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst16    ; abc         ; work         ;
 ;    |abc:inst17|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst17    ; abc         ; work         ;
 ;    |abc:inst18|            ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst18    ; abc         ; work         ;
@@ -245,26 +245,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |numA|ASM:inst9|PRESENTE                                                                                                                                                                                                                                          ;
-+-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
-; Name              ; PRESENTE.WIND ; PRESENTE.LOGRADO ; PRESENTE.PRUEBA ; PRESENTE.DELAY4 ; PRESENTE.ESTADO4 ; PRESENTE.edo3 ; PRESENTE.temporal ; PRESENTE.DELAYLED ; PRESENTE.DELAY2 ; PRESENTE.DELAY ; PRESENTE.ESTADO2 ; PRESENTE.ESTADO1 ; PRESENTE.ESTADO0 ; PRESENTE.INICIO ;
-+-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
-; PRESENTE.INICIO   ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 0               ;
-; PRESENTE.ESTADO0  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1                ; 1               ;
-; PRESENTE.ESTADO1  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 1                ; 0                ; 1               ;
-; PRESENTE.ESTADO2  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 1                ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAY    ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 1              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAY2   ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 1               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAYLED ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 1                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.temporal ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 1                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.edo3     ; 0             ; 0                ; 0               ; 0               ; 0                ; 1             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.ESTADO4  ; 0             ; 0                ; 0               ; 0               ; 1                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.DELAY4   ; 0             ; 0                ; 0               ; 1               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.PRUEBA   ; 0             ; 0                ; 1               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.LOGRADO  ; 0             ; 1                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-; PRESENTE.WIND     ; 1             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0                ; 1               ;
-+-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+------------------+-----------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |numA|ASM:inst1|PRESENTE                                                                                                                                                                                                                       ;
++-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+-----------------+
+; Name              ; PRESENTE.WIND ; PRESENTE.LOGRADO ; PRESENTE.PRUEBA ; PRESENTE.DELAY4 ; PRESENTE.ESTADO4 ; PRESENTE.edo3 ; PRESENTE.temporal ; PRESENTE.DELAYLED ; PRESENTE.DELAY2 ; PRESENTE.DELAY ; PRESENTE.ESTADO2 ; PRESENTE.ESTADO1 ; PRESENTE.INICIO ;
++-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+-----------------+
+; PRESENTE.INICIO   ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 0               ;
+; PRESENTE.ESTADO1  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 1                ; 1               ;
+; PRESENTE.ESTADO2  ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 1                ; 0                ; 1               ;
+; PRESENTE.DELAY    ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 1              ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAY2   ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 1               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAYLED ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 1                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.temporal ; 0             ; 0                ; 0               ; 0               ; 0                ; 0             ; 1                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.edo3     ; 0             ; 0                ; 0               ; 0               ; 0                ; 1             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.ESTADO4  ; 0             ; 0                ; 0               ; 0               ; 1                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.DELAY4   ; 0             ; 0                ; 0               ; 1               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.PRUEBA   ; 0             ; 0                ; 1               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.LOGRADO  ; 0             ; 1                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
+; PRESENTE.WIND     ; 1             ; 0                ; 0               ; 0               ; 0                ; 0             ; 0                 ; 0                 ; 0               ; 0              ; 0                ; 0                ; 1               ;
++-------------------+---------------+------------------+-----------------+-----------------+------------------+---------------+-------------------+-------------------+-----------------+----------------+------------------+------------------+-----------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -272,18 +271,17 @@ Encoding Type:  One-Hot
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; ASM:inst9|L0[7]                        ; Merged with ASM:inst9|L0[6]            ;
-; ASM:inst9|L1[7]                        ; Merged with ASM:inst9|L1[6]            ;
-; ASM:inst9|L2[7]                        ; Merged with ASM:inst9|L2[6]            ;
-; ASM:inst9|L3[7]                        ; Merged with ASM:inst9|L3[6]            ;
-; ASM:inst9|L4[7]                        ; Merged with ASM:inst9|L4[6]            ;
-; ASM:inst9|L5[7]                        ; Merged with ASM:inst9|L5[6]            ;
-; ASM:inst9|PRESENTE.PRUEBA              ; Stuck at GND due to stuck port data_in ;
-; ASM:inst9|PRESENTE.WIND                ; Stuck at GND due to stuck port data_in ;
+; ASM:inst1|L0[7]                        ; Merged with ASM:inst1|L0[6]            ;
+; ASM:inst1|L1[7]                        ; Merged with ASM:inst1|L1[6]            ;
+; ASM:inst1|L2[7]                        ; Merged with ASM:inst1|L2[6]            ;
+; ASM:inst1|L3[7]                        ; Merged with ASM:inst1|L3[6]            ;
+; ASM:inst1|L4[7]                        ; Merged with ASM:inst1|L4[6]            ;
+; ASM:inst1|L5[7]                        ; Merged with ASM:inst1|L5[6]            ;
+; ASM:inst1|PRESENTE.PRUEBA              ; Stuck at GND due to stuck port data_in ;
+; ASM:inst1|PRESENTE.WIND                ; Stuck at GND due to stuck port data_in ;
 ; divf:inst3|AUX[0]                      ; Merged with divf:inst15|AUX[0]         ;
 ; divf:inst3|AUX[1]                      ; Merged with divf:inst15|AUX[1]         ;
-; ASM:inst9|AUXI[3]                      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 11 ;                                        ;
+; Total Number of Removed Registers = 10 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -293,11 +291,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 297   ;
-; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 13    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 181   ;
+; Number of registers using Clock Enable       ; 232   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -307,16 +305,16 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |numA|ASM:inst9|AUX2[2]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |numA|teclado:inst|CUENTA[1] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |numA|ASM:inst9|V3[0]        ;
-; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |numA|ASM:inst9|seed3[13]    ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |numA|ASM:inst9|L0[2]        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |numA|ASM:inst9|D[2]         ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst9|AUX[18]      ;
-; 7:1                ; 12 bits   ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; Yes        ; |numA|ASM:inst9|N2[1]        ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |numA|ASM:inst9|D[0]         ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |numA|ASM:inst9|PRESENTE     ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |numA|ASM:inst1|AUX2[15]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |numA|teclado:inst|CUENTA[0] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |numA|ASM:inst1|V2[0]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |numA|ASM:inst1|L0[4]        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |numA|ASM:inst1|AUXI[2]      ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|AUX[8]       ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 12 LEs               ; 48 LEs                 ; Yes        ; |numA|ASM:inst1|N3[3]        ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 3 LEs                ; 12 LEs                 ; Yes        ; |numA|ASM:inst1|D[2]         ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |numA|ASM:inst1|U[3]         ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; No         ; |numA|ASM:inst1|Selector51   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
@@ -345,24 +343,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 59                          ;
+; boundary_port         ; 60                          ;
 ; cycloneiii_ff         ; 297                         ;
-;     ENA               ; 132                         ;
-;     ENA SCLR          ; 36                          ;
+;     ENA               ; 155                         ;
+;     ENA SCLR          ; 64                          ;
 ;     ENA SLD           ; 13                          ;
-;     plain             ; 116                         ;
-; cycloneiii_lcell_comb ; 604                         ;
+;     plain             ; 65                          ;
+; cycloneiii_lcell_comb ; 603                         ;
 ;     arith             ; 106                         ;
 ;         2 data inputs ; 106                         ;
-;     normal            ; 498                         ;
+;     normal            ; 497                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 49                          ;
-;         3 data inputs ; 54                          ;
-;         4 data inputs ; 387                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 58                          ;
+;         3 data inputs ; 96                          ;
+;         4 data inputs ; 336                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.72                        ;
+; Average LUT depth     ; 2.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -371,7 +369,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -381,7 +379,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed May  1 00:55:14 2024
+    Info: Processing started: Wed May  1 13:01:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off numA -c numA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -439,7 +437,7 @@ Info (10041): Inferred latch for "SAL[4]" at abc.vhd(14) File: C:/Users/joshu/Do
 Info (10041): Inferred latch for "SAL[5]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
 Info (10041): Inferred latch for "SAL[6]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
 Info (10041): Inferred latch for "SAL[7]" at abc.vhd(14) File: C:/Users/joshu/Documents/VLSI/numA/abc.vhd Line: 14
-Info (12128): Elaborating entity "ASM" for hierarchy "ASM:inst9"
+Info (12128): Elaborating entity "ASM" for hierarchy "ASM:inst1"
 Info (12128): Elaborating entity "rom" for hierarchy "rom:inst10"
 Info (12128): Elaborating entity "conta" for hierarchy "conta:inst13"
 Info (12128): Elaborating entity "divf" for hierarchy "divf:inst3"
@@ -455,14 +453,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 711 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 710 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 652 logic cells
+    Info (21061): Implemented 650 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Wed May  1 00:56:00 2024
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Wed May  1 13:02:08 2024
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:22
 
 
