@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed May  1 13:02:36 2024
-Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Fitter Status : Successful - Sat May  4 15:47:25 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : numA
 Top-level Entity Name : numA
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 625 / 49,760 ( 1 % )
-    Total combinational functions : 603 / 49,760 ( 1 % )
-    Dedicated logic registers : 297 / 49,760 ( < 1 % )
-Total registers : 297
+Total logic elements : 652 / 49,760 ( 1 % )
+    Total combinational functions : 626 / 49,760 ( 1 % )
+    Dedicated logic registers : 303 / 49,760 ( < 1 % )
+Total registers : 303
 Total pins : 60 / 360 ( 17 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
