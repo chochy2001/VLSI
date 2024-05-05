@@ -1,5 +1,5 @@
 Analysis & Synthesis report for numA
-Sat May  4 15:47:02 2024
+Sun May  5 03:42:46 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May  4 15:47:02 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sun May  5 03:42:46 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; numA                                           ;
 ; Top-level Entity Name              ; numA                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 673                                            ;
-;     Total combinational functions  ; 625                                            ;
+; Total logic elements               ; 691                                            ;
+;     Total combinational functions  ; 655                                            ;
 ;     Dedicated logic registers      ; 303                                            ;
 ; Total registers                    ; 303                                            ;
 ; Total pins                         ; 60                                             ;
@@ -193,16 +193,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 673             ;
+; Estimated Total logic elements              ; 691             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 625             ;
+; Total combinational functions               ; 655             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 346             ;
-;     -- 3 input functions                    ; 101             ;
-;     -- <=2 input functions                  ; 178             ;
+;     -- 4 input functions                    ; 380             ;
+;     -- 3 input functions                    ; 96              ;
+;     -- <=2 input functions                  ; 179             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 519             ;
+;     -- normal mode                          ; 549             ;
 ;     -- arithmetic mode                      ; 106             ;
 ;                                             ;                 ;
 ; Total registers                             ; 303             ;
@@ -215,8 +215,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; divf:inst15|CLK ;
 ; Maximum fan-out                             ; 261             ;
-; Total fan-out                               ; 3103            ;
-; Average fan-out                             ; 2.96            ;
+; Total fan-out                               ; 3210            ;
+; Average fan-out                             ; 2.98            ;
 +---------------------------------------------+-----------------+
 
 
@@ -225,20 +225,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |numA                      ; 625 (0)             ; 303 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 60   ; 0            ; 0          ; |numA               ; numA        ; work         ;
-;    |ASM:inst1|             ; 314 (314)           ; 256 (256)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|ASM:inst1     ; ASM         ; work         ;
-;    |abc:inst16|            ; 36 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst16    ; abc         ; work         ;
-;    |abc:inst17|            ; 36 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst17    ; abc         ; work         ;
-;    |abc:inst18|            ; 36 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst18    ; abc         ; work         ;
-;    |abc:inst19|            ; 36 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst19    ; abc         ; work         ;
-;    |abc:inst20|            ; 36 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst20    ; abc         ; work         ;
-;    |abc:inst21|            ; 36 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst21    ; abc         ; work         ;
+; |numA                      ; 655 (0)             ; 303 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 60   ; 0            ; 0          ; |numA               ; numA        ; work         ;
+;    |ASM:inst1|             ; 335 (335)           ; 256 (256)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|ASM:inst1     ; ASM         ; work         ;
+;    |abc:inst16|            ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst16    ; abc         ; work         ;
+;    |abc:inst17|            ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst17    ; abc         ; work         ;
+;    |abc:inst18|            ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst18    ; abc         ; work         ;
+;    |abc:inst19|            ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst19    ; abc         ; work         ;
+;    |abc:inst20|            ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst20    ; abc         ; work         ;
+;    |abc:inst21|            ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|abc:inst21    ; abc         ; work         ;
 ;    |conta:inst13|          ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|conta:inst13  ; conta       ; work         ;
 ;    |divf:inst15|           ; 27 (27)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|divf:inst15   ; divf        ; work         ;
 ;    |divf:inst3|            ; 40 (40)             ; 23 (23)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|divf:inst3    ; divf        ; work         ;
 ;    |rom1:inst11|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom1:inst11   ; rom1        ; work         ;
-;    |rom2:inst12|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom2:inst12   ; rom2        ; work         ;
-;    |rom:inst10|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom:inst10    ; rom         ; work         ;
+;    |rom2:inst12|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom2:inst12   ; rom2        ; work         ;
+;    |rom:inst10|            ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|rom:inst10    ; rom         ; work         ;
 ;    |teclado:inst|          ; 15 (15)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |numA|teclado:inst  ; teclado     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -293,8 +293,8 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 303   ;
-; Number of registers using Synchronous Clear  ; 96    ;
-; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Synchronous Clear  ; 88    ;
+; Number of registers using Synchronous Load   ; 13    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 232   ;
@@ -307,17 +307,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |numA|ASM:inst1|AUX2[21]     ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |numA|ASM:inst1|AUX2[19]     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |numA|teclado:inst|CUENTA[0] ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |numA|ASM:inst1|L0[3]        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |numA|ASM:inst1|AUXI[2]      ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|AUX[9]       ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|AUXLED[2]    ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |numA|ASM:inst1|D[1]         ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |numA|ASM:inst1|U[0]         ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 0 LEs                ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|V1[1]        ;
-; 13:1               ; 12 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|N3[2]        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |numA|ASM:inst1|PRESENTE     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |numA|ASM:inst1|AUXI[2]      ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |numA|ASM:inst1|U[2]         ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|AUX[21]      ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|AUXLED[21]   ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |numA|ASM:inst1|U[0]         ;
+; 10:1               ; 12 bits   ; 72 LEs        ; 12 LEs               ; 60 LEs                 ; Yes        ; |numA|ASM:inst1|V2[3]        ;
+; 12:1               ; 12 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |numA|ASM:inst1|N3[2]        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |numA|ASM:inst1|PRESENTE     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
@@ -348,22 +348,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 60                          ;
 ; cycloneiii_ff         ; 303                         ;
-;     ENA               ; 115                         ;
-;     ENA SCLR          ; 96                          ;
-;     ENA SLD           ; 21                          ;
+;     ENA               ; 131                         ;
+;     ENA SCLR          ; 88                          ;
+;     ENA SLD           ; 13                          ;
 ;     plain             ; 71                          ;
-; cycloneiii_lcell_comb ; 626                         ;
+; cycloneiii_lcell_comb ; 656                         ;
 ;     arith             ; 106                         ;
 ;         2 data inputs ; 106                         ;
-;     normal            ; 520                         ;
+;     normal            ; 550                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 66                          ;
-;         3 data inputs ; 101                         ;
-;         4 data inputs ; 346                         ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 96                          ;
+;         4 data inputs ; 380                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.70                        ;
+; Average LUT depth     ; 2.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -372,7 +372,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -382,7 +382,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat May  4 15:46:44 2024
+    Info: Processing started: Sun May  5 03:42:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off numA -c numA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -456,14 +456,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 734 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 752 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 674 logic cells
+    Info (21061): Implemented 692 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Sat May  4 15:47:02 2024
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Sun May  5 03:42:46 2024
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:42
 
 

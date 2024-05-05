@@ -16,7 +16,7 @@ architecture Behavioral of ASM is
 
 TYPE ESTADOS IS (INICIO, ESTADO1, ESTADO2, DELAY, DELAY2, DELAYLED,temporal,edo3,ESTADO4,DELAY4,PRUEBA,LOGRADO, WIND,logica, pass, pass2);
 SIGNAL PRESENTE: ESTADOS := INICIO;
-SIGNAL AUXI,logic:INTEGER RANGE 0 TO 8;
+SIGNAL AUXI:INTEGER RANGE 0 TO 8;
 SIGNAL AUX, AUX2, AUXLED: INTEGER RANGE 0 TO 10000000 := 0;
 signal random_value : std_logic_vector(23 downto 0);
 
@@ -27,6 +27,7 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 	
 	variable seed1, seed2, seed3 : std_logic_vector(23 downto 0);
 	variable  V1,V2,V3: std_logic_vector(3 downto 0);
+	variable logic:INTEGER RANGE 0 TO 8;
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
 				CASE PRESENTE IS
@@ -46,6 +47,7 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 									random_value <= (others => '0');
 								 AUXI<=0;
 							elsif hab='0' then
+							
 								seed1 := seed1 xor (seed1(4) xor seed1(3)) & seed1(23 downto 1);
 								seed2 := seed2 xor (seed2(6) xor seed2(2)) & seed2(23 downto 1);
 								seed3 := seed3 xor (seed3(9) xor seed3(8)) & seed3(23 downto 1);
@@ -57,15 +59,15 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 								V1:=N1;
 								V2:=N2;
 								V3:=N3;
-								PRESENTE <= DELAYLED;
+								--PRESENTE <= DELAYLED;
 			---Esto pruebalo cuando ya agarre el teclado por si sale otro error de los if xD
---								if auxi=0 then
---									PRESENTE <= DELAYLED;
---								elsif auxi=1 then
---									presente<=pass;
---								elsif auxi=2 then
---									presente<=pass2;
---								end if;
+								if auxi=0 then
+									PRESENTE <= DELAYLED;
+								elsif auxi=1 then
+									presente<=pass;
+								elsif auxi=2 then
+									presente<=pass2;
+								end if;
 							end if;
 						END IF;
 				
@@ -81,10 +83,10 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 				
 				
 					WHEN DELAY => 
-						V1:=V1;
-						V2:=V2;
-						V3:=V3;
-						IF AUX = 500 THEN
+--						V1:=V1;
+--						V2:=V2;
+--						V3:=V3;
+						IF AUX = 1000 THEN
 							AUX <= 0;
 							PRESENTE <= temporal;
 						ELSE
@@ -93,9 +95,9 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						END IF;
 						
 					when temporal =>
-						V1:=V1;
-						V2:=V2;
-						V3:=V3;
+--						V1:=V1;
+--						V2:=V2;
+--						V3:=V3;
 						if rst='1' then 
 							presente<= estado1;
 						elsif rst='0' then 
@@ -104,34 +106,37 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						
 					---revisar donde estoy cambiando el valor v o n a 0 para que al llegar al estado 2 aparezac
 					WHEN PRUEBA =>
---						 U<="0001";
---						 D <= "0001";
---						 C <= "0001";
-						 V1 := v1;---v1/n1?
-						 V2:= v2;
-						 V3:= v3;
+						 c<="0001";
+						 D <= "0000";
+						 u <= "0011";
+						 V1 := "0001";---v1/n1?
+						 V2:= "0000";
+						 V3:= "0011";
 						
 						PRESENTE<= logica;
 						
 					when logica=>
 					
-						iF V1=U then
+						iF V3=U then
+						
 							if  V2=D  then 
-								if  V3=C THEN
-									logic<=1;
-									presente<=estado2;
+								if  V1=C THEN
+									logic:=1;
+									--presente<=estado2;
 								else 
-								logic <=0;
-								presente<=estado2;
+								logic :=0;
+								--presente<=estado2;
 								end if;
 							else 
-							logic <=0;
-							presente<=estado2;
+							logic :=0;
+							--presente<=estado2;
 							end if;
 						else 
-						logic<=0;
-						presente<=estado2;
-						end if;	
+						logic:=0;
+						--
+						end if;
+					presente<=estado2;	
+					
 					WHEN ESTADO2=>
 						V1:=V1;
 						V2:=V2;
@@ -144,7 +149,7 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						L5 <= L4;
 						
 					if prob='1' then 
-						 U<=c;
+						 U<=u;
 						 D <= d;
 						 C <= c;
 						 n1 <= v1;
@@ -157,27 +162,25 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						C<=C;
 						--IF  V1 = U AND V2 = D AND V3 = C THEN
 						if logic=1 then
-								 U <= "1010";
-								 D <= "1010";
-								 C <= "1010";
-								 N1 <= "1010";
-								 N2 <= "1010";
-								 N3 <= "1010";
-							IF AUXI < 3 or auxi=0 THEN  
-								AUXI <= AUXI+1; -- Sig Nivel
+--								 U <= "1010";
+--								 D <= "1010";
+--								 C <= "1010";
+--								 N1 <= "1010";
+--								 N2 <= "1010";
+--								 N3 <= "1010";
+							IF AUXi<2 THEN  
+								AUXI <= AUXI+1;
 								PRESENTE <= ESTADO4; 
-							ELSIF AUX=3 THEN ---YA SON 3 VALIDOS
+							ELSe
 								PRESENTE <= LOGRADO;
 							END IF;
 						ELSif logic=0 then
+							auxi<=0;
 							PRESENTE <= edo3; -- Fallaste
 						END IF;
 					end if;
 					
 					when edo3=>
-						V1:=V1;
-						V2:=V2;
-						V3:=V3;
 						 U <= "1010";
 						 D <= "1010";
 						 C <= "1010";
@@ -211,6 +214,12 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 					END IF;
 					
 					WHEN ESTADO4 =>
+					 U <= "1010";
+						 D <= "1010";
+						 C <= "1010";
+						 N1 <= "1010";
+						 N2<= "1010";
+						 N3<= "1010";
 						L0 <= M;
 						L1 <= L0;
 						L2 <= L1;
@@ -235,9 +244,13 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						END IF;
 						
 					WHEN LOGRADO =>
-						V1:=V1;
-						V2:=V2;
-						V3:=V3;
+						
+						 U <= "1010";
+						 D <= "1010";
+						 C <= "1010";
+						 N1 <= "1010";
+						 N2<= "1010";
+						 N3<= "1010";
 						L0 <= M2;
 						L1 <= L0;
 						L2 <= L1;
@@ -258,9 +271,9 @@ signal digit0, digit1, digit2 : std_logic_vector(3 downto 0);
 						END IF;
 						
 					WHEN DELAYLED => 
-					   V1:=V1;
-						V2:=V2;
-						V3:=V3;
+--					   V1:=V1;
+--						V2:=V2;
+--						V3:=V3;
 					IF AUXLED = 5000 THEN
 						AUXLED <= 0;
 						N1 <= "1010";
