@@ -44,23 +44,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "R[3]",
+					"name" : "RST",
 					"strict" : false
 				},
 				{
-					"name" : "R[2]",
+					"name" : "inclk0",
 					"strict" : false
 				},
 				{
-					"name" : "R[1]",
-					"strict" : false
-				},
-				{
-					"name" : "R[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
+					"name" : "CLK_MST",
 					"strict" : false
 				}
 			]

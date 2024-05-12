@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun May  5 09:39:08 2024
+Analysis & Synthesis Status : Successful - Tue May  7 16:09:37 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : VGAproject
-Top-level Entity Name : VGAproject
+Top-level Entity Name : VGABlockDiagram
 Family : MAX 10
-Total logic elements : 131
-    Total combinational functions : 130
-    Dedicated logic registers : 69
-Total registers : 69
-Total pins : 16
+Total logic elements : 868
+    Total combinational functions : 867
+    Dedicated logic registers : 207
+Total registers : 207
+Total pins : 17
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
