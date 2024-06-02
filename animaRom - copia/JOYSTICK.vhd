@@ -12,22 +12,22 @@ BEGIN
 
 	PROCESS(X,Y,U,D,L,RR)
 	BEGIN
-		IF (X > 490 AND X < 550) AND ( Y < 20) THEN
-			U 	<= '0';
-			D 	<= '1';
-			L 	<= '1';
-			RR <= '1';
-		ELSIF (X > 490 AND X < 550) AND ( Y > 900) THEN
+		IF (X > 2028 AND X < 2068) AND ( Y < 1000) THEN
 			U 	<= '1';
 			D 	<= '0';
 			L 	<= '1';
 			RR <= '1';
-		ELSIF (Y > 490 AND Y < 550) AND ( X <20) THEN
+		ELSIF (X > 2028 AND X < 2068) AND ( Y > 3000) THEN
+			U 	<= '0';
+			D 	<= '1';
+			L 	<= '1';
+			RR <= '1';
+		ELSIF (Y > 1500 AND Y < 2500) AND ( X < 1500) THEN
 			U 	<= '1';
 			D 	<= '1';
 			L 	<= '0';
 			RR <= '1';
-		ELSIF (Y > 490 AND Y < 550) AND ( X > 900) THEN
+		ELSIF (Y > 1500 AND Y < 2500) AND ( X > 2500) THEN
 			U 	<= '1';
 			D 	<= '1';
 			L 	<= '1';
@@ -36,7 +36,7 @@ BEGIN
 			U 	<= '1';
 			D 	<= '1';
 			L 	<= '1';
-			RR <= '0';
+			RR <= '1';
 		END IF;
 	END PROCESS;
 END BEAS;
