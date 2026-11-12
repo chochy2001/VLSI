@@ -35,3 +35,4 @@ pll_config/
 temp/
 *~
 *.bak
+.DS_Store
